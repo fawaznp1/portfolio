@@ -1,0 +1,251 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=EB+Garamond:ital,wght@1,400;1,500;1,600;1,700&family=Merriweather:wght@300&family=Roboto+Slab:wght@500;600&display=swap');
+  
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;/* 1vh=19.2px */
+    background-color: white;
+    position: relative; /* comparison and placing done by browser */
+}
+
+
+.navbar{
+    display: flex; /* move left */
+    justify-content: space-between; /* used for space b/w two content */
+    width: 85%;
+    margin-left: 100px;
+    align-items: center; /* move items exact center */
+}
+
+
+.logo{
+    width: 130px;
+}
+
+
+.listitem{
+    display: inline-block; /* same line list placing */
+    list-style: none;/* appears same in all browser without listing dots */
+    margin: 10px 20px;
+}
+
+
+.links{
+    text-decoration: none; /* underline of the link property can be removed */
+    color: black;
+    font-weight: bold;
+}
+
+
+.links:hover{
+    color: rgb(235, 120, 12);
+}
+
+
+.title{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+
+.title h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+
+.title h1 span{
+    color: rgb(235, 120, 12);
+}
+
+
+p{
+    margin-bottom: 20px;
+}
+
+.download{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.title_img{
+    width: 45%;
+    height: 80%;
+    position: absolute; /* container nte akath ayitt place cheyyum */
+    right: 30px;
+    bottom: 0px;
+
+}
+
+
+.title_img img{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);/* scroll bar nte effect avide vechit scroll option kanikathe irikkan */
+    transition: bottom 1s, left 2s;/* for smooth moving */
+
+}
+
+.title_img:hover #shape{
+    bottom:  70px;
+}
+
+.title_img:hover #girl{
+    left: 40%;
+}
+
+#about{
+    margin: 25% 8% 0px 8%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    font-size: 55px;
+}
+
+.heading span{
+    font-size: 20px;
+    color: green;
+}
+
+.about_content{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);/* indicates 2 col and 1 frames
+    1fr=255px */
+    gap: 2rem; /* 1rem=16px */
+    margin-top: 4rem;
+}
+.about_image img{
+    width: 80%;
+    border-radius: 2rem;
+}
+
+.about_details{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: justify;
+    font-family: 'Jost', sans-serif;
+
+}
+
+.information{
+    margin-top: 2rem;
+}
+
+.infobox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.infobox span{
+    margin-left: 1rem;
+}
+
+#skill{
+    margin: 8% 8% 0px 8%;
+}
+
+.skill_content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.skill_image{
+    width: 90%;
+    padding-left: 4rem;
+}
+
+.bar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    margin-bottom: 1rem;
+    position: relative;
+
+}
+
+.base_bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+}
+
+.html-bar{
+    width: 95%;
+    background-color: orangered;
+}
+
+.css-bar{
+    width: 88%;
+    background-color: orangered;
+}
+
+.react-bar{
+    width: 89%;
+    background-color: orangered;
+}
+
+.js-bar{
+    width: 85%;
+    background-color: orangered;
+}
+
+.icon-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 10px;
+}
+
+.icon i{
+    font-size: 30px;
+    color: black;
+}
+
+.icon:hover{
+    background-image: linear-gradient(to bottom right,yellow,red);
+
+}
+
+.icon:hover i{
+    color: white;
+}
