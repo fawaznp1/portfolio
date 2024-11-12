@@ -1,0 +1,26 @@
+/* Default text color */
+.nav-link {
+    color: black; /* Black text color */
+  }
+  
+  /* Active (clicked) state */
+  .nav-link.active {
+    color: #007bff; /* Change this to any color you want when clicked */
+    font-weight: bold; /* Optional: Make the clicked link bold */
+  }
+  
+  /* Optional: Add hover effect for better user experience */
+  .nav-link:hover {
+    color: #221402; /* Blue color on hover */
+  }
+  
+  /* Optional: Remove underline */
+  .nav-link {
+    text-decoration: none;
+  }
+  
+  /* Background color */
+  .navbar {
+    background-color: white; /* White background */
+  }
+  
