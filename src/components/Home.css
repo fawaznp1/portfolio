@@ -186,21 +186,20 @@ h1 {
     justify-content: center;
     align-items: center;
     background: #16384c;
+    
 }
 
 .containerp .card
 {
     max-width: 300px;
-    height: 215px;
-    margin: 30px 10px;
+    height: 450px;
+    margin: 40px 20px ;
     padding: 20px 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     transition: 0.3s ease-in-out;
+    
 }
-.containerp .card:hover
-{
-    height: 450px;
-}
+
 .containerp .card .imgContainer
 {
     position: relative;
@@ -219,27 +218,27 @@ h1 {
 .containerp .card .content
 {
     position: relative;
-    margin-top: -140px;
+    margin-top: -30px;
     padding: 10px 15px;
     text-align: center;
     color:#111;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     pointer-events: none;
     transition: 0.3s ease-in-out;
 
-   /*  font-family: "Abel", serif;
-  font-weight: 500;
-  font-style: normal; */
+   
 }
 .containerp .card:hover .content
 {
     visibility: visible;
     opacity: 1;
-    margin-top: -40px;
-    transition-delay: 0.3s;
+  /*     margin-top: -140px;
+ */    transition-delay: 0.3s;
 }
-
+.containerp a{
+  z-index: 10;
+}
 
 /* service */
 
@@ -287,12 +286,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-/* .service-caption h5 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #deeaf6; 
-  margin-bottom: 10px;
-} */
+
 
 .service-caption p {
   font-size: 1.1rem;
@@ -301,13 +295,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 30px;
-} */
+
 
 
 

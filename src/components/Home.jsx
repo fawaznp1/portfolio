@@ -18,16 +18,14 @@ import Tabww from './Tabww';
 import htmlimage from '../images/html logo.svg';
 import githubimg from '../images/github1.svg';
 import githubimg2 from '../images/github3.svg';
-
 import reactimg from '../images/react.svg';
 import nactet from '../images/NACTET_page-0001.jpg';
 import nactet2 from '../images/NACTET_page-0002.jpg';
 import black1 from '../images/black1.jpg';
 import black3 from '../images/black4.jpg';
-
-
 import ielts from '../images/IELTS SCORE_page-0001.jpg';
 import ielts2 from '../images/IELTS SCORE_page-0002.jpg';
+import Projectc from './Projectc';
 
 
 function Home() {
@@ -126,7 +124,7 @@ function Home() {
 
 {/* pojects */}
 <h1 className='text-center' id='projects'>My Projects</h1>
-<div class="containerp col-md-12 container d-flex align-items-center justify-content-center position-relative flex-wrap">
+ {/* <div class="containerp col-md-12 container d-flex align-items-center justify-content-center position-relative flex-wrap">
        <div class="card d-flex position-relative flex-column">
             <div class='imgContainer'>
                 <a href="https://netflixfz.vercel.app/" target='_blank'><img src={netflix} /></a>
@@ -135,12 +133,15 @@ function Home() {
             <div class="content">
                 <h2>Netflix (Clone)</h2>
                 <p>A Netflix clone in React features a sleek UI, displays movie banners, categories, and trailers, integrates a movie API for fetching real-time data, and offers search functionality. It mimics the original platform's layout and implements user authentication for a complete experience.</p>
+                
+              <a href="/">hello</a>
             </div>
         </div>
         <div class="card d-flex position-relative flex-column">
             <div class='imgContainer'>
                 <a href='https://autohorizon.vercel.app/' target='_blank'>
                   <img src={auto} />
+                 
                 </a>
             </div>
             <div class="content">
@@ -160,10 +161,10 @@ function Home() {
         </div>
         <div class="card d-flex position-relative flex-column">
             <div class='imgContainer'>
-               <a href=" https://food-circle-fz.vercel.app/" target='_blank'><img src={rest} /></a> 
+               <a href=" " target='_blank'><img src={rest} /></a> 
             </div>
             <div class="content">
-                <h2>Food Circle </h2>
+                <h2></h2>
                 <p>A React project, helps users find nearby hotels and restaurants using location services. It features a map interface, a responsive design, real-time search, and user reviews. The platform focuses on user experience, offering detailed hotel information, ratings, and directions.</p>
             </div>
         </div>
@@ -171,7 +172,7 @@ function Home() {
 
         <div class="card d-flex position-relative flex-column">
             <div class='imgContainer'>
-               <a href="https://bmw-fz.vercel.app/" target='_blank'><img src={bmw} /></a> 
+               <a href="" target='_blank'><img src={bmw} /></a> 
             </div>
             <div class="content">
                 <h2>BMW</h2>
@@ -181,10 +182,10 @@ function Home() {
 
         <div class="card d-flex position-relative flex-column">
             <div class='imgContainer'>
-               <a href="https://weather-craze-fawaz.netlify.app/" target='_blank'><img src={weather} /></a> 
+               <a href="" target='_blank'><img src={weather} /></a> 
             </div>
             <div class="content">
-                <h2>WeatherCraze</h2>
+                <h2></h2>
                 <p>A Javascript based app, provides real-time weather updates, forecasts, and location-based data. It features a sleek UI, responsive design, search functionality, and integrates a weather API for accurate information. The app offers detailed weather metrics and a seamless user experience.</p>
             </div>
         </div>
@@ -194,8 +195,8 @@ function Home() {
                <a href="https://safejourneyfawaz.netlify.app/" target='_blank'><img src={safej} /></a> 
             </div>
             <div class="content">
-                <h2>Safe Journey</h2>
-                <p>A Bootstrap travel website, helps users plan trips, find destinations, and book hotels. It features a responsive design, a gallery of attractions, search filters, and a contact form. The site focuses on easy navigation, modern styling, and user engagement.</p>
+                <h2></h2>
+                <p></p>
             </div>
         </div>
 
@@ -209,7 +210,8 @@ function Home() {
                 <p>A Bootstrap-based corporate website, highlights company services& offers client testimonials. It features a professional design, responsive layout, and contact forms, focusing user engagement and seamless browsing experience.</p>
             </div>
         </div>
-    </div>
+    </div> */}
+    <Projectc />
 
 
 {/* services */}
@@ -280,15 +282,7 @@ function Home() {
       </div>
     </Col>
 
-    <Col md={4} className="d-flex justify-content-center mb-2">
-      <div className="certificate-item text-center">
-        <img src={black3} alt="Certificate 2" className="certificate-image" />
-        <div className="certificate-caption">
-          <h5>MEARN Stack</h5>
-          <p>Completed Full stack Development certification from Luminar Technolab</p>
-        </div>
-      </div>
-    </Col>
+    
   </Row>
 </Container>
 
