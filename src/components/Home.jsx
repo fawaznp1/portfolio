@@ -153,10 +153,10 @@ function Home() {
                 src={fawazimage}
                 alt="Profile"
                 style={{
-                  width: '250px',
-                  height: '250px',
+                  width: '280px',
+                  height: '350px',
                   objectFit: 'cover',
-                  borderRadius: '80%',
+                  borderRadius: '50%',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
                   border: '4px solid #fff', // White border for aesthetic appeal
                   transition: 'transform 0.3s ease-in-out'
@@ -167,7 +167,7 @@ function Home() {
 
           {/* Text Section (Equal Part) */}
           <div className="col-md-6">
-            <p className="section-paragraph text-center">
+            <p className="section-paragraph text-center mt-2">
               I'm a software developer passionate about <span className="text-success">React</span> and <span className="text-success">Web</span> development. I specialize in full-stack <span className="text-success">(MEARN)</span> and love learning new technologies.
               <br /><br />
               My goal is to build innovative, user-friendly solutions that solve real-world problems.
