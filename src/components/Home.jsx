@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 import { Card,Col,Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import pimage1 from '../images/image6.jpg';
@@ -52,7 +54,27 @@ function Home() {
         }
       });
     };
-  
+
+   /*  useEffect((fawazimg) => {
+        gsap.from(".fawazimg", {
+          x: 100, 
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out"
+        });
+    
+        gsap.from(".section-paragraph", {
+          x: -100, 
+          opacity: 0,
+          duration: 1,
+          delay: 0.2, 
+          ease: "power3.out"
+        });
+      }, []);
+   */
+   
+
+    
   
   return (
     <>
@@ -88,12 +110,14 @@ function Home() {
         </div>
       </div>
     </div>
+
+    
     <div>
-    <div id="about" className="about-section py-5">
+   {/*  <div id="about" className="about-section py-5">
     <div className="container my-5">
     <h1 className="section-heading text-center">About Me</h1>
   <div className="row align-items-center">
-    {/* Image Section (1 part) */}
+   
     <div className="col-md-3 text-center">
       <img class='fawazimg'
         src={fawazimage}
@@ -103,7 +127,7 @@ function Home() {
       />
     </div>
 
-    {/* Text Section (4 parts) */}
+   
     <div className="col-md-9">
       
       <p className="section-paragraph text-center">
@@ -115,7 +139,43 @@ function Home() {
     </div>
   </div>
 </div>
-</div>
+</div> */}
+
+<div id="about" className="about-section py-5">
+      <div className="container my-5">
+        <h1 className="section-heading text-center">About Me</h1>
+        <div className="row align-items-center">
+          {/* Image Section (Equal Part) */}
+          <div className="col-md-6 text-center">
+            <div className="image-container" style={{ position: 'relative' }}>
+              <img
+                className="fawazimg img-fluid rounded-circle"
+                src={fawazimage}
+                alt="Profile"
+                style={{
+                  width: '250px',
+                  height: '250px',
+                  objectFit: 'cover',
+                  borderRadius: '80%',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                  border: '4px solid #fff', // White border for aesthetic appeal
+                  transition: 'transform 0.3s ease-in-out'
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Text Section (Equal Part) */}
+          <div className="col-md-6">
+            <p className="section-paragraph text-center">
+              I'm a software developer passionate about <span className="text-success">React</span> and <span className="text-success">Web</span> development. I specialize in full-stack <span className="text-success">(MEARN)</span> and love learning new technologies.
+              <br /><br />
+              My goal is to build innovative, user-friendly solutions that solve real-world problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
     
@@ -211,6 +271,10 @@ function Home() {
             </div>
         </div>
     </div> */}
+
+
+
+    
     <Projectc />
 
 
@@ -260,7 +324,7 @@ function Home() {
 
   {/* Row for Certificates */}
   <Row className="mb-4">
-    <Col md={4} className="d-flex justify-content-center mb-2">
+    <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-2">
       <div className="certificate-item text-center">
         <img src={ielts2} alt="Certificate 1" className="certificate-image" />
         <div className="certificate-caption">
@@ -272,7 +336,7 @@ function Home() {
 
     
 
-    <Col md={4} className="d-flex justify-content-center mb-2">
+    <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-2">
       <div className="certificate-item text-center">
         <img src={nactet2} alt="Certificate 3" className="certificate-image" />
         <div className="certificate-caption">

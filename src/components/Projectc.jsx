@@ -1,15 +1,9 @@
 import './Projectc.css';
 import React from "react";
 import { Col, Row, Tab, Tabs } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { data } from "../components/Data";
-import one from '../images/netflix.png'
-import two from '../images/netflix.png'
-import three from '../images/netflix.png'
-import four from '../images/netflix.png'
-import five from '../images/netflix.png'
-import six from '../images/netflix.png'
+
 
 
 
@@ -30,7 +24,7 @@ function Projects() {
           <Tab eventKey="tab-1" title="">
             <Row>
               {data.map((item) => (
-                <Col className="mt-5" md={6} sm={12} lg={4}>
+                <Col className="mt-4" md={6} sm={12} lg={4}>
                   <div className="d-flex justify-content-center">
                     <Card
                       className="cr"

@@ -44,7 +44,8 @@ export default function App() {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-      © {currentYear} Copyright : fawaz_np
+      © {currentYear} Copyright&reg;
+      : fawaz_np
       {/* <a className='text-white' href='/'>
         
       </a> */}
