@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // At top
-import { FaReact, FaBootstrap, FaHtml5, FaCss3Alt, FaNodeJs, FaJsSquare, FaDatabase, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { FaReact, FaBootstrap, FaHtml5, FaCss3Alt, FaNodeJs, FaJsSquare, FaDatabase, FaAngular ,FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import './Tabww.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,8 +34,10 @@ const ProfileSection = () => {
   <h2>Skills</h2>
   <ul className="zigzag-list">
     <li className="left"><FaReact /> React</li>
-    <li className="right"><FaBootstrap /> Bootstrap</li>
+    <li className="right"><FaAngular /> Angular</li>
     <li className="left"><FaJsSquare /> JavaScript</li>
+    <li className="right"><FaBootstrap /> Bootstrap</li>
+    <li className="left"><FaDatabase /> SQL</li>
     <li className="right"><FaHtml5 /> HTML</li>
     <li className="left"><FaCss3Alt /> CSS</li>
     <li className="right"><FaDatabase /> MongoDB</li>

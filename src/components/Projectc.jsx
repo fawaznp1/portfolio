@@ -10,10 +10,8 @@ import { data } from "../components/Data";
 function Projects() { 
   console.log(data);
   return (
-    <div className="d-flex justify-content-center flex-column">
+    <div className="project-wrapper d-flex justify-content-center flex-column">
      
-
-
       <div className="mb-1">
         <Tabs
           justify
@@ -28,7 +26,7 @@ function Projects() {
                   <div className="d-flex justify-content-center">
                     <Card
                       className="cr"
-                      style={{ width: "23rem", height: "300px" }}
+                      style={{ width: "23rem", height: "19rem" }}
                     >
                       <Card.Img
                         className="object-fit-fill"
@@ -58,7 +56,7 @@ function Projects() {
                           >
                             <i
                               style={{ color: "white" }}
-                              class="fa-brands fa-github fa-xl"
+                              class="fa-brands fa-github fa-2xl"
                             ></i>
                           </a>
                           <a
@@ -68,7 +66,7 @@ function Projects() {
                           >
                             <i
                               style={{ color: "white" }}
-                              class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                              class="fa-solid fa-arrow-up-right-from-square fa-2xl"
                             ></i>
                           </a>
                         </div>
