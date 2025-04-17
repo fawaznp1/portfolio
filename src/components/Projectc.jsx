@@ -11,7 +11,7 @@ function Projects() {
   console.log(data);
   return (
     <div className="d-flex justify-content-center flex-column">
-     {/*  <h5 className="text-white mb-1 fw-light text-center">I would like to introduce some of my recent works...</h5> */}
+     
 
 
       <div className="mb-1">

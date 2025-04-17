@@ -15,7 +15,7 @@ import netflix  from '../images/netflix.png';
 import auto  from '../images/auto hoirzon.png';
 import jillion  from '../images/jillion.png';
 import  media from '../images/media.png';
-import fawazimage from '../images/Fawaz.jpg';
+import fawazimage from '../images/fawaz2.jpg';
 import Tabww from './Tabww';
 import htmlimage from '../images/html logo.svg';
 import githubimg from '../images/github1.svg';
@@ -28,6 +28,7 @@ import black3 from '../images/black4.jpg';
 import ielts from '../images/IELTS SCORE_page-0001.jpg';
 import ielts2 from '../images/IELTS SCORE_page-0002.jpg';
 import Projectc from './Projectc';
+import About from './About';
 
 
 function Home() {
@@ -55,23 +56,23 @@ function Home() {
       });
     };
 
-   /*  useEffect((fawazimg) => {
+   /*   useEffect((fawazimg) => {
         gsap.from(".fawazimg", {
           x: 100, 
-          opacity: 0,
+          opacity: 1,
           duration: 1,
           ease: "power3.out"
         });
     
         gsap.from(".section-paragraph", {
           x: -100, 
-          opacity: 0,
+          opacity: 1,
           duration: 1,
           delay: 0.2, 
           ease: "power3.out"
         });
-      }, []);
-   */
+      }, []); */
+   
    
 
     
@@ -88,7 +89,7 @@ function Home() {
           </h1>
             
           <p className="short-paragraph">
-            A passionate Front end developer, eager to learn and create awesome web experiences.
+            A passionate Front end developer, eager to learn and create  awesome web experiences.
           </p>
         <button
   className="btn btn-lg px-4 py-2 mt-3 mt-3"
@@ -112,71 +113,15 @@ function Home() {
     </div>
 
     
-    <div>
-   {/*  <div id="about" className="about-section py-5">
-    <div className="container my-5">
-    <h1 className="section-heading text-center">About Me</h1>
-  <div className="row align-items-center">
-   
-    <div className="col-md-3 text-center">
-      <img class='fawazimg'
-        src={fawazimage}
-        alt="Profile"
-        className="img-fluid rounded-circle"
-        style={{ width: '250px', height: '250px', objectFit: 'cover' , overflow: 'hidden' }}
-      />
+    <div id='about'>
+  
+
+    <About />
     </div>
+
 
    
-    <div className="col-md-9">
-      
-      <p className="section-paragraph text-center">
-        I'm a passionate software developer with a keen interest in <span className="text-success">React </span>
-        development and <span className="text-success">Web </span> technologies. I have a solid foundation in full-stack <span className="text-success">(MEARN) </span> development and am always eager to learn new tools and technologies to build innovative and user-friendly applications.
-        <br /><br />
-        With a creative mindset and problem-solving skills, I aim to contribute to projects that solve real-world problems and enhance user experiences.
-      </p>
-    </div>
-  </div>
-</div>
-</div> */}
 
-<div id="about" className="about-section py-5">
-      <div className="container my-5">
-        <h1 className="section-heading text-center">About Me</h1>
-        <div className="row align-items-center">
-          {/* Image Section (Equal Part) */}
-          <div className="col-md-6 text-center">
-            <div className="image-container" style={{ position: 'relative' }}>
-              <img
-                className="fawazimg img-fluid rounded-circle"
-                src={fawazimage}
-                alt="Profile"
-                style={{
-                  width: '280px',
-                  height: '350px',
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
-                  border: '4px solid #fff', // White border for aesthetic appeal
-                  transition: 'transform 0.3s ease-in-out'
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Text Section (Equal Part) */}
-          <div className="col-md-6">
-            <p className="section-paragraph text-center mt-2">
-              I'm a software developer passionate about <span className="text-success">React</span> and <span className="text-success">Web</span> development. I specialize in full-stack <span className="text-success">(MEARN)</span> and love learning new technologies.
-              <br /><br />
-              My goal is to build innovative, user-friendly solutions that solve real-world problems.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
 
     
 {/* tab */}

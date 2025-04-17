@@ -36,9 +36,12 @@ body{
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+    font-family: "Fontdiner Swanky", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
-  /* glow animaaion */
+  /* glow animation */
 
 /* Base */
 .fawazheading {
@@ -66,7 +69,7 @@ h1 {
 }
 
  h1 {
-  padding: 64px;
+  padding: 52px;
   background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
   background-clip: text;
   -webkit-text-fill-color: transparent;

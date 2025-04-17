@@ -6,9 +6,9 @@ import './Header.css'
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary mx-auto  sticky-top">
+    <Navbar expand="lg" className="bg-body-dark mx-auto  sticky-top">
       <Container>
-        <Navbar.Brand href="/" >Fawaz N P</Navbar.Brand>
+        <Navbar.Brand href="/" id='fawaznpnavbar'>Fawaz N P</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto justify-content-center">

@@ -21,6 +21,12 @@
   
   /* Background color */
   .navbar {
-    background-color: white; /* White background */
+/*     background-color: aqua ; 
+ */ 
+    background-color: rgb(109, 238, 238);   
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 700;
+    font-style:oblique;
   }
+
   
