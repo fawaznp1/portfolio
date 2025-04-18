@@ -1,30 +1,27 @@
-/* Default text color */
 .nav-link {
-    color: black; /* Black text color */
+    color: black; 
   }
   
-  /* Active (clicked) state */
   .nav-link.active {
-    color: #007bff; /* Change this to any color you want when clicked */
-    font-weight: bold; /* Optional: Make the clicked link bold */
+    font-weight: bold;
+    color: #f1f4f6; 
   }
   
-  /* Optional: Add hover effect for better user experience */
   .nav-link:hover {
-    color: #221402; /* Blue color on hover */
+  color: #027cef ;
+  backdrop-filter: blur(5px);
   }
   
-  /* Optional: Remove underline */
   .nav-link {
     text-decoration: none;
   }
   
-  /* Background color */
   .navbar {
 /*     background-color: aqua ; 
  */ 
-    background-color: rgb(109, 238, 238);   
-    font-family: "Rubik Scribble", system-ui;
+     background-color: rgb(109, 238, 238);    
+/*     background: linear-gradient(135deg, #21b8e2, #025874);
+ */    font-family: "Rubik Scribble", system-ui;
     font-weight: 700;
     font-style:oblique;
   }

@@ -2,7 +2,26 @@ body{
   background-color: #000!important;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+}
 .home-container {
     background-image: url('../images/image9.jpg'); /* Replace with your image URL */
     background-size: cover;

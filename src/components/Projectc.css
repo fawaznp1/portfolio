@@ -1,8 +1,20 @@
-/* 
-  .cr{
-  position: relative;
-  }
-   */
+.see-more-btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #21b8e2, #025874);
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+}
+
+.see-more-btn:hover {
+  background: linear-gradient(135deg, #21b8e2, #025874);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+}
 
    .project-wrapper {
     width: 100%;

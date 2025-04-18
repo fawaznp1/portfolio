@@ -29,6 +29,7 @@ import ielts from '../images/IELTS SCORE_page-0001.jpg';
 import ielts2 from '../images/IELTS SCORE_page-0002.jpg';
 import Projectc from './Projectc';
 import About from './About';
+import Certificate from './Certificate';
 
 
 function Home() {
@@ -119,107 +120,12 @@ function Home() {
     <About />
     </div>
 
-
-   
-
-
-    
-{/* tab */}
+{/* tabs*/}
 <Tabww />
 
 {/* pojects */}
 <h1 className='text-center' id='projects'>My Projects</h1>
- {/* <div class="containerp col-md-12 container d-flex align-items-center justify-content-center position-relative flex-wrap">
-       <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-                <a href="https://netflixfz.vercel.app/" target='_blank'><img src={netflix} /></a>
-            </div>
-            
-            <div class="content">
-                <h2>Netflix (Clone)</h2>
-                <p>A Netflix clone in React features a sleek UI, displays movie banners, categories, and trailers, integrates a movie API for fetching real-time data, and offers search functionality. It mimics the original platform's layout and implements user authentication for a complete experience.</p>
-                
-              <a href="/">hello</a>
-            </div>
-        </div>
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-                <a href='https://autohorizon.vercel.app/' target='_blank'>
-                  <img src={auto} />
-                 
-                </a>
-            </div>
-            <div class="content">
-                <h2>Auto Horizon</h2>
-                <p>A React-based blog, focuses on automotive topics, showcasing featured articles, car reviews, and industry news. It offers a responsive layout, includes a scrollable dropdown for car brands, and links users to detailed posts. The site is designed for seamless navigation and visual appeal.</p>
-            </div>
-        </div>
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-              <a href=" https://videoplayer-frontend-fz.vercel.app/" target='_blank'><img src={media} /></a>
-                
-            </div>
-            <div class="content">
-                <h2>Media player</h2>
-                <p>A React-based media player project includes audio and video playback, a sleek user interface, play/pause controls, volume adjustment, and a playlist feature. It supports multiple file formats, and offers a seamless user experience with modern styling and smooth animations.</p>
-            </div>
-        </div>
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-               <a href=" " target='_blank'><img src={rest} /></a> 
-            </div>
-            <div class="content">
-                <h2></h2>
-                <p>A React project, helps users find nearby hotels and restaurants using location services. It features a map interface, a responsive design, real-time search, and user reviews. The platform focuses on user experience, offering detailed hotel information, ratings, and directions.</p>
-            </div>
-        </div>
-
-
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-               <a href="" target='_blank'><img src={bmw} /></a> 
-            </div>
-            <div class="content">
-                <h2>BMW</h2>
-                <p>A BMW clone built with React showcases luxury cars, features a sleek UI, a model gallery, car details, and a booking form. It includes responsive design, animations, and integrates a car API for real-time data, enhancing user engagement and experience.</p>
-            </div>
-        </div>
-
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-               <a href="" target='_blank'><img src={weather} /></a> 
-            </div>
-            <div class="content">
-                <h2></h2>
-                <p>A Javascript based app, provides real-time weather updates, forecasts, and location-based data. It features a sleek UI, responsive design, search functionality, and integrates a weather API for accurate information. The app offers detailed weather metrics and a seamless user experience.</p>
-            </div>
-        </div>
-
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-               <a href="https://safejourneyfawaz.netlify.app/" target='_blank'><img src={safej} /></a> 
-            </div>
-            <div class="content">
-                <h2></h2>
-                <p></p>
-            </div>
-        </div>
-
-
-        <div class="card d-flex position-relative flex-column">
-            <div class='imgContainer'>
-               <a href="" target='_blank'><img src={jillion} /></a> 
-            </div>
-            <div class="content">
-                <h2>Jillion Technologies</h2>
-                <p>A Bootstrap-based corporate website, highlights company services& offers client testimonials. It features a professional design, responsive layout, and contact forms, focusing user engagement and seamless browsing experience.</p>
-            </div>
-        </div>
-    </div> */}
-
-
-
-    
+  
     <Projectc />
 
 
@@ -264,38 +170,9 @@ function Home() {
 
 
 {/* certificaates */}
-<Container className="certificates my-5 mb-4" id="certificates">
-  <h1 className="certify text-center mb-4">Certificates</h1>
 
-  {/* Row for Certificates */}
-  <Row className="mb-4">
-    <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-2">
-      <div className="certificate-item text-center">
-        <img src={ielts2} alt="Certificate 1" className="certificate-image" />
-        <div className="certificate-caption">
-        <h5>IELTS Certification</h5>
-        <p>An overall score of 6.5, demonstrating English proficiency.</p>
-        </div>
-      </div>
-    </Col>
 
-    
-
-    <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-2">
-      <div className="certificate-item text-center">
-        <img src={nactet2} alt="Certificate 3" className="certificate-image" />
-        <div className="certificate-caption">
-          <h5>NACTET</h5>
-          <p>Certification in MEARN Stack from National council for technology and training</p>
-        </div>
-      </div>
-    </Col>
-
-    
-  </Row>
-</Container>
-
-    
+    <Certificate />
 
 
 
