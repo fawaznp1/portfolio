@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react";
 import { Col, Row, Tab, Tabs } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { data } from "../components/Data";
+import { useEffect } from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -18,6 +20,11 @@ function Projects() {
       return !prev;
     });
   };
+
+  useEffect(() => {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(el => new window.bootstrap.Tooltip(el));
+  }, []);
 
   return (
     <div className="project-wrapper d-flex justify-content-center flex-column">
@@ -79,9 +86,15 @@ function Projects() {
                             <a style={{ border: "0px", marginRight: "5px" }} target="__blank" href={item.github}>
                               <i style={{ color: "white" }} className="fa-brands fa-github fa-2xl"></i>
                             </a>
-                            <a style={{ border: "0px" }} target="__blank" href={item.link}>
-                              <i style={{ color: "white" }} className="fa-solid fa-arrow-up-right-from-square fa-2xl"></i>
-                            </a>
+                            <a 
+  style={{ border: "0px" }} 
+  target="__blank" 
+  href={item.link} 
+  title="View Live Demo"  // Tooltip text
+>
+  <i style={{ color: "white" }} className="fa-solid fa-arrow-up-right-from-square fa-2xl"></i>
+</a>
+
                           </div>
                         </Card.Body>
                       </Card>

@@ -1,129 +1,115 @@
 .animated-container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    overflow: hidden;
-    flex-direction: row;
-  }
-  
-  /* IMAGE / CAROUSEL SECTION */
-  .carousel-section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: row;
+}
 
-    flex: 0 0 40%;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    min-height: 250px;
-    max-height: 85%;
-    
+.carousel-section {
+  flex: 0 0 40%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  min-height: 250px;
+  max-height: 85%;
+  overflow: hidden; 
+}
+
+.carousel-section img {
+  width: 100%;
+  height: auto; 
+  border-radius: 12px;
+  object-fit: cover; 
+}
+
+.text-section {
+  flex: 0 0 60%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.8rem;
+  border-radius: 12px;
+  font-family: "Teko", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+
+.text-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Tablets - iPads & below */
+@media (max-width: 991px) {
+  .animated-container {
+    flex-direction: column;
+    height: auto;
   }
-  
+
+  .carousel-section,
+  .text-section {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .text-section {
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+/* Smaller Devices - phones */
+@media (max-width: 576px) {
   .carousel-section img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
+    height: auto; /* Allow the image to resize naturally on small screens */
   }
-  
-  /* TEXT SECTION */
+
   .text-section {
-    flex: 0 0 60%;
-    background: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    font-size: 1.8rem;
-    border-radius: 12px;
-    font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 350;
+    padding: 1.1rem;
+    font-size: 1.2rem;
+    font-family: "Nova Flat", system-ui;
+    font-weight: 400;
     font-style: normal;
-    
-    
   }
+
   .text-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    
+    font-size: 2rem;
   }
-  
-  /* TABLETS - iPads & below */
-  @media (max-width: 991px) {
-    .animated-container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .carousel-section,
-    .text-section {
-      flex: 0 0 100%;
-      width: 100%;
-      padding: 1.5rem;
-    }
-  
-    .text-section {
-      text-align: center;
-      padding-top: 1rem;
-    }
-  }
-  
- /* SMALLER DEVICES - phones */
-@media (max-width: 576px) {
-    .carousel-section img {
-      height: 250px;
-    }
-  
-    .text-section {
-      padding: 1.1rem;
-      font-size: 1.2rem;
-      
-      font-family: "Nova Flat", system-ui;
-      font-weight: 400;
-      font-style: normal;
-      
-      
-    }
-  
-    .text-section h2 {
-      font-size: 2rem;
-    }
-  }
-  
-  
+}
 
-  /* glow animation */
+/* Glow animation for heading */
+h2 {
+  color: hsl(0, 0%, 28%);
+  font-weight: bold !important;
+  font-family: monospace;
+  letter-spacing: 7px !important;
+  word-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
 
-  h2 {
-    color: hsl(0, 0%, 28%);
-   
-    font-weight: bold!important;
-    font-family: monospace;
-    letter-spacing: 7px!important;
-    word-spacing: 2px;
-    cursor: pointer;
-/*     text-transform: uppercase;
- */    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-   h2 {
-    padding: 40px;
-    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s infinite linear;
-  }
+h2 {
+  padding: 40px;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
 
-  /* text font google */
-  .teko {
-    font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 350;
-    font-style: normal;
-  }
+.teko {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+}

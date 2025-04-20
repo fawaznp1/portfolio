@@ -7,7 +7,6 @@ import Slider from 'react-slick';
 import './About.css';
 import fawaz2 from '../images/fawaz2.jpg';
 import fawaz3 from '../images/fawaz3.jpg';
-import fawaz5 from '../images/fawaz8.jpg';
 import fawaz6 from '../images/fawaz6.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -72,18 +71,18 @@ const AnimatedSection = () => {
     <div className="animated-container">
       <div className="carousel-section" ref={carouselRef}>
        
-
+ 
 <Carousel>
       <Carousel.Item interval={1000}>
         <img src={fawaz2} alt='p1'  />
         
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={800}>
         <img src={fawaz3} alt='p2'/>
        
       </Carousel.Item>
       
-      <Carousel.Item>
+      <Carousel.Item interval={800}>
         <img src={fawaz6} alt='p4' />
        
       </Carousel.Item>
