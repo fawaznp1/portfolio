@@ -6,6 +6,9 @@ import Container from 'react-bootstrap/Container';
 import pimage1 from '../images/image6.jpg';
 import './Home.css'; 
 import Swal from 'sweetalert2';
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
 import safej   from '../images/safej.png';
 import weather  from '../images/weather.png';
@@ -36,48 +39,10 @@ function Home() {
     const text = "Hello! I Am Fawaz N P";
 
     const handleButtonClick = () => {
-      let timerInterval;
-      Swal.fire({
-        
-        icon:'success',
-        html: "Great, you can view it as Fawaz_Resume.pdf",
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading();
-          const timer = Swal.getPopup().querySelector("b");
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-      }).then((result) => {
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log("I was closed by the timer");
-        }
-      });
-    };
+      toast.success('Resume Downloaded..!');
+    }; 
 
-   /*   useEffect((fawazimg) => {
-        gsap.from(".fawazimg", {
-          x: 100, 
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out"
-        });
-    
-        gsap.from(".section-paragraph", {
-          x: -100, 
-          opacity: 1,
-          duration: 1,
-          delay: 0.2, 
-          ease: "power3.out"
-        });
-      }, []); */
-   
-   
 
-    
-  
   return (
     <>
     <div className="home-container">
@@ -109,6 +74,7 @@ function Home() {
     style={{ textDecoration: 'none', color: 'inherit' }}> Resume  <i class="fa-solid fa-download fa-beat fa-sm p-2"></i>
     </a>
             </button> 
+            <ToastContainer position='top-left' />
         </div>
       </div>
     </div>

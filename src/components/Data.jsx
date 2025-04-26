@@ -6,13 +6,26 @@ import five from '../images/bmw.png'
 import six from '../images/weather.png'
 import seven from '../images/safej.png'
 import eight from '../images/jillion.png'
+import nine from '../images/marwa1.png'
 
 
 
 
 
+export const data =[
+       
+       {
+       
+              title: 'Marwa arts.in',
+              desc: 'Marwa Arts is a full-stack web application designed for selling handcrafted artworks, featuring a clean UI, responsive design, and smooth shopping experience. ',
+              Technolgies :'React,JS,Node,MongoDB,Express, Bootstrap, Html & CSS',
+              imgsrc: nine,
+              github:'https://github.com/fawaznp1/marwaf',
+              link:'https://marwaarts.vercel.app/',
 
-export const data =[{
+            
+},
+       {
        
               title: 'Netflix (clone)',
               desc: 'A Netflix clone in React with a sleek UI, movie banners, categories, trailers, real-time API data, search functionality, and user authentication. ',
