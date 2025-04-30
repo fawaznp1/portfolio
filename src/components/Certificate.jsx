@@ -5,6 +5,12 @@ import ieltsPreview from '../images/IELTS SCORE_page-0002.jpg';     // smaller p
 import ieltsFull from '../images/IELTS SCORE_page-0001.jpg';           // larger/full image for modal
 import nactetPreview from '../images/NACTET_page-0002.jpg';
 import nactetFull from '../images/NACTET_page-0001.jpg';
+import react1p from '../images/react1.png';
+import react1f from '../images/react1.png';
+import js1p from '../images/js1.png';
+import js1f from '../images/js1.png';
+
+
 
 function Certificates() {
   const [showModal, setShowModal] = useState(false);
@@ -62,6 +68,47 @@ function Certificates() {
             <div className="certificate-caption">
               <h5 className="fw-bold">NACTET</h5>
               <p className="text-muted">Certification in MEARN Stack from National Council for Technology and Training.</p>
+            </div>
+          </div>
+        </Col>
+
+        <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-4">
+          <div
+            className="certificate-item text-center p-3 shadow rounded bg-light fade-in"
+            style={{ animationDelay: '0.3s', cursor: 'pointer' }}
+            onClick={() =>
+              handleShow(
+                react1f,
+                'React Crash Course',
+                'Certification in React crash course from Greatstack'
+              )
+            }
+          >
+            <img src={react1p} alt="greatstack Certificate" className="certificate-image mb-3" />
+            <div className="certificate-caption">
+              <h5 className="fw-bold">React Crash Course</h5>
+              <p className="text-muted">Certification in React crash course from Greatstack.</p>
+            </div>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+      <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-4">
+          <div
+            className="certificate-item text-center p-3 shadow rounded bg-light fade-in"
+            style={{ animationDelay: '0.3s', cursor: 'pointer' }}
+            onClick={() =>
+              handleShow(
+                js1p,
+                'JavaScript Crash Course',
+                'Certification in Javascript crash course from Greatstack'
+              )
+            }
+          >
+            <img src={js1f} alt="greatstack Certificate" className="certificate-image mb-3" />
+            <div className="certificate-caption">
+              <h5 className="fw-bold">JavaScript Crash Course</h5>
+              <p className="text-muted">Certification in Javascript crash course from Greatstack.</p>
             </div>
           </div>
         </Col>
