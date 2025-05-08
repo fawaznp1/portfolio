@@ -45,19 +45,20 @@ function BasicExample() {
               Projects
             </Nav.Link>
             <Nav.Link
-              href="#services"
-              className={`nav-link ${activeLink === 'services' ? 'active' : ''}`}
-              onClick={() => { handleSetActive('services'); handleClose(); }}
-            >
-              Services
-            </Nav.Link>
-            <Nav.Link
               href="#certificates"
               className={`nav-link ${activeLink === 'certificates' ? 'active' : ''}`}
               onClick={() => { handleSetActive('certificates'); handleClose(); }}
             >
               Certificates
             </Nav.Link>
+            <Nav.Link
+              href="#services"
+              className={`nav-link ${activeLink === 'services' ? 'active' : ''}`}
+              onClick={() => { handleSetActive('services'); handleClose(); }}
+            >
+              Services
+            </Nav.Link>
+            
             <Nav.Link
               href="#contact"
               className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}

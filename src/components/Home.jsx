@@ -94,6 +94,8 @@ function Home() {
     <Projectc />
 
 
+    <Certificate />
+
 {/* services */}
 <Container className="my-5" id='services'>
   <h1 className="text-center mb-4"> Services</h1>
@@ -137,7 +139,7 @@ function Home() {
 {/* certificaates */}
 
 
-    <Certificate />
+   
 
 
 
