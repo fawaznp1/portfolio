@@ -22,7 +22,7 @@
 .carousel-section img {
   width: 95%;
   height: auto; 
-  border-radius: 20px;
+  border-radius: 30px;
   object-fit: cover; 
 }
 

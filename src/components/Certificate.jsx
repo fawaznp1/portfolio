@@ -31,7 +31,7 @@ function Certificates() {
     <Container className="certificates my-5 mb-4" id="certificates">
       <h1 className="certify text-center mb-4">Certificates</h1>
 
-      <Row className="mb-4">
+      <Row className="mb-2">
         <Col md={6} sm={12} lg={4} className="d-flex justify-content-center mb-4">
           <div
             className="certificate-item text-center p-3 shadow rounded bg-light fade-in"

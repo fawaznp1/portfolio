@@ -71,8 +71,8 @@ const AnimatedSection = () => {
     <div className="animated-container">
       <div className="carousel-section" ref={carouselRef}>
        
- 
-<Carousel>
+ <img src={fawaz2} alt='p1' className=''  />
+   {/*  <Carousel>
       <Carousel.Item interval={1000}>
         <img src={fawaz2} alt='p1'  />
         
@@ -86,7 +86,7 @@ const AnimatedSection = () => {
         <img src={fawaz6} alt='p4' />
        
       </Carousel.Item>
-    </Carousel>
+    </Carousel> */}
       </div>
       <div className="text-section" ref={textRef}>
         <h2>About Me</h2>
