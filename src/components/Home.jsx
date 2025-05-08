@@ -26,8 +26,7 @@ import githubimg2 from '../images/github3.svg';
 import reactimg from '../images/react.svg';
 import nactet from '../images/NACTET_page-0001.jpg';
 import nactet2 from '../images/NACTET_page-0002.jpg';
-import black1 from '../images/black1.jpg';
-import black3 from '../images/black4.jpg';
+
 import ielts from '../images/IELTS SCORE_page-0001.jpg';
 import ielts2 from '../images/IELTS SCORE_page-0002.jpg';
 import Projectc from './Projectc';
