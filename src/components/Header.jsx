@@ -14,7 +14,7 @@ function BasicExample() {
 
   const handleSetActive = (link) => {
     setActiveLink(link);
-  };
+  }; 
 
   return (
     <Navbar expanded={expanded} expand="lg" className="bg-body-dark mx-auto sticky-top">
