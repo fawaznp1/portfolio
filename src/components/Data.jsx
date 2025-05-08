@@ -36,17 +36,7 @@ export const data =[
 
             
 },
-{
-       title: 'Auto Horizon',
-       desc: 'A React-based automotive blog featuring articles, car reviews, industry news, and a responsive layout designed for smooth navigation and visual appeal.',
-       Technolgies :'React,JS,Bootstrap,Html,CSS',
-       imgsrc: two,
-       github:'https://github.com/fawaznp1/autohorizon1',
-       link:'https://autohorizon.vercel.app/',
 
-
-         
-},
 {
        title: 'Media player',
        desc: 'A React-based media player with audio/video playback, sleek UI, play/pause controls, volume adjustment, playlist feature, multi-format support, and smooth animations.',
@@ -76,6 +66,17 @@ export const data =[
        imgsrc: five,
        github:'https://github.com/fawaznp1/food-circle',
        link:'https://bmw-fz.vercel.app/',
+
+
+         
+},
+{
+       title: 'Auto Horizon',
+       desc: 'A React-based automotive blog featuring articles, car reviews, industry news, and a responsive layout designed for smooth navigation and visual appeal.',
+       Technolgies :'React,JS,Bootstrap,Html,CSS',
+       imgsrc: two,
+       github:'https://github.com/fawaznp1/autohorizon1',
+       link:'https://autohorizon.vercel.app/',
 
 
          

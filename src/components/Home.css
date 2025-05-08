@@ -52,12 +52,25 @@ body{
   }
   
   .short-paragraph {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     max-width: 600px;
     margin: 0 auto;
-    font-family: "Fontdiner Swanky", serif;
+    /* font-family: "Fontdiner Swanky", serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
+
+    /*  font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; */
+    
+      /*  font-family: "Rubik Moonrocks", sans-serif;
+      font-weight: 500;
+      font-style: normal;  */
+
+      font-family: "Bonheur Royale", cursive;
+      font-weight: 500;
+      font-style: normal;
   }
   
   /* glow animation */
@@ -317,5 +330,6 @@ h1 {
   font-size: 1rem;
   color: #555;
 }
+
 
 
