@@ -67,7 +67,7 @@ function Home() {
     fontWeight: 'bold',
     transition: 'all 0.3s ease', // Smooth transition effect
   }}onClick={handleButtonClick} >
-            <a href="/Fawaz.pdf" 
+            <a href="/Fawaz N P Web Dev.pdf" 
     download="Fawaz_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
