@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <>
-    <div className="home-container">
+    <div className="home-container" >
       <div className="overlay">
         <div className="content">
           <h1 className='fawazheading mb-4' style={{ marginRight: '15px' }} >

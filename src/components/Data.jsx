@@ -1,12 +1,4 @@
-import one from '../images/netflix.png'
-import two from '../images/auto hoirzon.png'
-import three from '../images/media.png'
-import four from '../images/restaurant.png'
-import five from '../images/bmw.png'
-import six from '../images/weather.png'
-import seven from '../images/safej.png'
-import eight from '../images/jillion.png'
-import nine from '../images/marwa1.png';
+
 import w1 from '../images/webp/netflix.webp'
 import w2 from '../images/webp/auto hoirzon.webp'
 import w3 from '../images/webp/media.webp'
@@ -16,6 +8,7 @@ import w6 from '../images/webp/weather.webp'
 import w7 from '../images/webp/safej.webp'
 import w8 from '../images/webp/jillion.webp'
 import w9 from '../images/webp/marwa1.webp'
+import w10 from '../images/webp/urban.webp'
 
 
 
@@ -35,6 +28,33 @@ export const data =[
 
             
 },
+
+
+
+{
+       
+              title: 'Urban Drive',
+              desc: 'A modern React-based premium car rental website offering seamless booking, elegant design, and dynamic user experience.',
+              Technolgies :'React,JS,Bootstrap,Html,CSS',
+              imgsrc: w10,
+              github:'https://github.com/fawaznp1/car-rental',
+              link:'https://urbandrive.vercel.app/',
+              alt:'urban drive image',
+
+            
+},
+{
+       title: 'Media player',
+       desc: 'A React-based media player with audio/video playback, sleek UI, play/pause controls, volume adjustment, playlist feature, multi-format support, and smooth animations.',
+       Technolgies :'React,JS,Bootstrap,Html,CSS',
+       imgsrc: w3,
+       github:'https://github.com/fawaznp1/videoplayer_frontend',
+       link:'https://videoplayer-frontend-fz.vercel.app/',
+       alt:'videoplayer image',
+
+
+         
+},
        {
        
               title: 'Netflix (clone)',
@@ -48,18 +68,7 @@ export const data =[
             
 },
 
-{
-       title: 'Media player',
-       desc: 'A React-based media player with audio/video playback, sleek UI, play/pause controls, volume adjustment, playlist feature, multi-format support, and smooth animations.',
-       Technolgies :'React,JS,Bootstrap,Html,CSS',
-       imgsrc: w3,
-       github:'https://github.com/fawaznp1/videoplayer_frontend',
-       link:'https://videoplayer-frontend-fz.vercel.app/',
-       alt:'videoplayer image',
 
-
-         
-},
 {
        title: 'Food Circle ',
        desc: 'A React app for finding nearby hotels and restaurants, featuring an interactive map, real-time search, user reviews, and detailed info for seamless navigation.',
