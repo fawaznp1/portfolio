@@ -34,13 +34,13 @@ function Projects() {
         <Tabs
           justify
           variant="underline"
-          className="text-white mt-2"
+          className="text-white"
           defaultActiveKey="tab-1"
         >
           <Tab eventKey="tab-1" title="">
             <Row>
               {data.slice(0, 3).map((item, index) => (
-                <Col className="mt-4" md={6} sm={12} lg={4} key={index}>
+                <Col className="mt-1" md={6} sm={12} lg={4} key={index}>
                   <div className="d-flex justify-content-center">
                     <Card className="cr" style={{ width: "23rem", height: "19rem" }}>
                       <Card.Img className="object-fit-fill" height={"300px"} variant="top" src={item.imgsrc} loading='lazy' />
