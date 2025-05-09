@@ -43,7 +43,7 @@ function Projects() {
                 <Col className="mt-4" md={6} sm={12} lg={4} key={index}>
                   <div className="d-flex justify-content-center">
                     <Card className="cr" style={{ width: "23rem", height: "19rem" }}>
-                      <Card.Img className="object-fit-fill" height={"300px"} variant="top" src={item.imgsrc} />
+                      <Card.Img className="object-fit-fill" height={"300px"} variant="top" src={item.imgsrc} loading='lazy' />
                       <Card.Body>
                         <Card.Title className="text-white">{item.title}</Card.Title>
                         <Card.Text className="text-white mt-2" style={{ fontSize: "12px" }}>

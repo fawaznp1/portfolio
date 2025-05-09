@@ -90,7 +90,6 @@
 h2 {
   color: hsl(0, 0%, 28%);
   font-weight: bold !important;
-  font-family: monospace;
   letter-spacing: 7px !important;
   word-spacing: 2px;
   cursor: pointer;
@@ -108,9 +107,3 @@ h2 {
   animation: shine 3s infinite linear;
 }
 
-.teko {
-  font-family: "Teko", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 350;
-  font-style: normal;
-}
