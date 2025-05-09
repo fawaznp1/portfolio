@@ -31,6 +31,7 @@ export const data =[
               imgsrc: w9,
               github:'https://github.com/fawaznp1/marwaf',
               link:'https://marwaarts.vercel.app/',
+              alt:'marwa image',
 
             
 },
@@ -42,6 +43,7 @@ export const data =[
               imgsrc: w1,
               github:'https://github.com/fawaznp1/Netflix',
               link:'https://netflixfz.vercel.app/',
+              alt:'netflix image',
 
             
 },
@@ -53,6 +55,7 @@ export const data =[
        imgsrc: w3,
        github:'https://github.com/fawaznp1/videoplayer_frontend',
        link:'https://videoplayer-frontend-fz.vercel.app/',
+       alt:'videoplayer image',
 
 
          
@@ -64,6 +67,7 @@ export const data =[
        imgsrc: w4,
        github:'https://github.com/fawaznp1/food-circle',
        link:' https://food-circle-fz.vercel.app/',
+       alt:'food circle image',
 
 
          
@@ -75,7 +79,7 @@ export const data =[
        imgsrc: w5,
        github:'https://github.com/fawaznp1/food-circle',
        link:'https://bmw-fz.vercel.app/',
-
+       alt:'bmw image',
 
          
 },
@@ -86,7 +90,7 @@ export const data =[
        imgsrc: w2,
        github:'https://github.com/fawaznp1/autohorizon1',
        link:'https://autohorizon.vercel.app/',
-
+       alt:'autohorizon image',
 
          
 },
@@ -97,6 +101,7 @@ export const data =[
        imgsrc: w6,
        github:'https://github.com/fawaznp1/weathercraze',
        link:' https://weather-craze-fawaz.netlify.app/',
+       alt:'weather craze image',
 
 
          
@@ -108,6 +113,7 @@ export const data =[
     imgsrc: w7,
     github:'https://github.com/fawaznp1/safejourney',
     link:'https://safejourneyfawaz.netlify.app/',
+    alt:'safejourney image',
 
 
       
@@ -119,6 +125,7 @@ export const data =[
     imgsrc: w8,
     github:'https://github.com/fawaznp1/safejourney',
     link:'https://jtechno.vercel.app/',
+    alt:'jtechno image',
 
 
       
