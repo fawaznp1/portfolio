@@ -56,23 +56,29 @@ function Home() {
           <p className="short-paragraph">
             A passionate Front end developer, eager to learn and create  awesome web experiences.
           </p>
-        <button
-  className="btn btn-lg px-4 py-2 mt-3 mt-3"
+        <a
+  href="/Fawaz N P Web Dev.pdf"
+  download="Fawaz_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-lg px-4 py-2 mt-3"
   style={{
     color: 'white',
-    backgroundColor: 'transparent', // Transparent background
-    border: '2px solid white', // White outline
-    borderRadius: '8px', // Rounded corners (optional)
+    backgroundColor: 'transparent',
+    border: '2px solid white',
+    borderRadius: '8px',
     fontWeight: 'bold',
-    transition: 'all 0.3s ease', // Smooth transition effect
-  }}onClick={handleButtonClick} >
-            <a href="/Fawaz N P Web Dev.pdf" 
-    download="Fawaz_Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ textDecoration: 'none', color: 'inherit' }}> Resume  <i class="fa-solid fa-download fa-beat fa-sm p-2"></i>
-    </a>
-            </button> 
+    transition: 'all 0.3s ease',
+    textDecoration: 'none',
+    display: 'inline-block',
+     minWidth: '48px',
+    minHeight: '48px',
+  }}
+  aria-label="Download Resume"
+>
+  Resume <i className="fa-solid fa-download fa-beat fa-sm p-2"></i>
+</a>
+ 
             <ToastContainer position='top-left' />
         </div>
       </div>

@@ -44,7 +44,7 @@ function Certificates() {
               )
             }
           >
-            <img src={ieltsPreview} alt="IELTS Certificate" className="certificate-image mb-3" />
+            <img src={ieltsPreview} alt="IELTS Certificate" className="certificate-image mb-3" loading='lazy' />
             <div className="certificate-caption">
               <h5 className="fw-bold">IELTS Certification</h5>
               <p className="text-muted">An overall score of 6.5, demonstrating English proficiency.</p>
@@ -64,7 +64,7 @@ function Certificates() {
               )
             }
           >
-            <img src={nactetPreview} alt="NACTET Certificate" className="certificate-image mb-3" />
+            <img src={nactetPreview} alt="NACTET Certificate" className="certificate-image mb-3" loading='lazy' />
             <div className="certificate-caption">
               <h5 className="fw-bold">NACTET</h5>
               <p className="text-muted">Certification in MEARN Stack from National Council for Technology and Training.</p>
@@ -84,7 +84,7 @@ function Certificates() {
               )
             }
           >
-            <img src={react1p} alt="greatstack Certificate" className="certificate-image mb-3" />
+            <img src={react1p} alt="greatstack Certificate" className="certificate-image mb-3" loading='lazy' />
             <div className="certificate-caption">
               <h5 className="fw-bold">React Crash Course</h5>
               <p className="text-muted">Certification in React crash course from Greatstack.</p>
@@ -105,7 +105,7 @@ function Certificates() {
               )
             }
           >
-            <img src={js1f} alt="greatstack Certificate" className="certificate-image mb-3" />
+            <img src={js1f} alt="greatstack Certificate" className="certificate-image mb-3" loading='lazy' />
             <div className="certificate-caption">
               <h5 className="fw-bold">JavaScript Crash Course</h5>
               <p className="text-muted">Certification in Javascript crash course from Greatstack.</p>
