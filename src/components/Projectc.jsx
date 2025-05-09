@@ -84,6 +84,8 @@ function Projects() {
         <i style={{ color: "white", marginRight: "0.5rem" }} className="fa-brands fa-github fa-lg"></i>
         <span className="text-white font-medium">View Source Code</span>
       </a>
+
+      
       
       <a
         style={{ 
@@ -98,7 +100,7 @@ function Projects() {
           transform: isLiveHovered ? "translateY(-2px)" : "translateY(0)",
           boxShadow: isLiveHovered ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none"
         }}
-        target="__blank"
+        target="__blank" 
         href={item.link}
         title="View Live Demo"
         onMouseEnter={() => setIsLiveHovered(true)}
