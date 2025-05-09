@@ -71,7 +71,7 @@ const AnimatedSection = () => {
     <div className="animated-container">
       <div className="carousel-section" ref={carouselRef}>
        
- <img src={fawaz2} alt='Fawaz image' className=''  />
+ <img src={fawaz2} alt='Fawaz image' className='' loading='lazy'  />
    {/*  <Carousel>
       <Carousel.Item interval={1000}>
         <img src={fawaz2} alt='p1'  />

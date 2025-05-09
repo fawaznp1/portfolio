@@ -3,32 +3,18 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Card,Col,Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import pimage1 from '../images/image6.jpg';
 import './Home.css'; 
-import Swal from 'sweetalert2';
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
-import safej   from '../images/safej.png';
-import weather  from '../images/weather.png';
-import  bmw from '../images/bmw.png';
-import rest  from '../images/restaurant.png';
-import netflix  from '../images/netflix.png';
-import auto  from '../images/auto hoirzon.png';
-import jillion  from '../images/jillion.png';
-import  media from '../images/media.png';
-import fawazimage from '../images/fawaz2.jpg';
+
 import Tabww from './Tabww';
 import htmlimage from '../images/html logo.svg';
-import githubimg from '../images/github1.svg';
+
 import githubimg2 from '../images/github3.svg';
 import reactimg from '../images/react.svg';
-import nactet from '../images/NACTET_page-0001.jpg';
-import nactet2 from '../images/NACTET_page-0002.jpg';
 
-import ielts from '../images/IELTS SCORE_page-0001.jpg';
-import ielts2 from '../images/IELTS SCORE_page-0002.jpg';
+
 import Projectc from './Projectc';
 import About from './About';
 import Certificate from './Certificate';
@@ -62,6 +48,7 @@ function Home() {
   target="_blank"
   rel="noopener noreferrer"
   className="btn btn-lg px-4 py-2 mt-3"
+  onClick={handleButtonClick}
   style={{
     color: 'white',
     backgroundColor: 'transparent',
