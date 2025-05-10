@@ -132,7 +132,7 @@ export const data =[
     desc: 'A Bootstrap corporate website featuring services, client testimonials, and a responsive design with contact forms for seamless user experience.',
     Technolgies :'JS,Bootstrap,Html,CSS',
     imgsrc: w8,
-    github:'https://github.com/fawaznp1/safejourney',
+    github:'https://github.com/fawaznp1/jtechno2',
     link:'https://jtechno.vercel.app/',
     alt:'jtechno image',
 
