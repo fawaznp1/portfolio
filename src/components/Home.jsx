@@ -18,6 +18,7 @@ import reactimg from '../images/react.svg';
 import Projectc from './Projectc';
 import About from './About';
 import Certificate from './Certificate';
+import ServicesSection from './Service';
 
 
 function Home() {
@@ -89,11 +90,9 @@ function Home() {
 
     <Certificate />
 
-{/* services */}
-<Container className="my-5" id='services'>
+{/* <Container className="my-5" id='services'>
   <h1 className="text-center mb-4"> Services</h1>
 
-  {/* Row 1 */}
   <Row className="mb-4">
     <Col md={4} className="d-flex justify-content-center mb-2">
       <div className="service-item text-center">
@@ -125,20 +124,9 @@ function Home() {
       </div>
     </Col>
   </Row>
-</Container>
+</Container> */}
 
-
-
-
-{/* certificaates */}
-
-
-   
-
-
-
-
-
+<ServicesSection />
 
       <section id='contact'>
 

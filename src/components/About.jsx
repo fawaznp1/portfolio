@@ -1,40 +1,76 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Slider from 'react-slick';
 import './About.css';
 import fawaz2 from '../images/fawaz2.jpg';
 import fawaz3 from '../images/fawaz3.jpg';
 import fawaz6 from '../images/fawaz6.jpg';
-import Carousel from 'react-bootstrap/Carousel';
 
-
-
+// Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedSection = () => {
-  const carouselRef = useRef(null);
+  const imageContainerRef = useRef(null);
   const textRef = useRef(null);
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const imageRef = useRef(null);
+  const glowRef = useRef(null);
 
   useEffect(() => {
+    // Image animation
     gsap.fromTo(
-      carouselRef.current,
+      imageContainerRef.current,
       { x: '-100%', opacity: 0 },
       {
         x: '0%',
         opacity: 1,
-        duration: 1,
-        ease: 'power2.out',
+        duration: 1.2,
+        ease: 'power3.out',
         scrollTrigger: {
-          trigger: carouselRef.current,
+          trigger: imageContainerRef.current,
           start: 'top 80%',
           toggleActions: 'play none none reset',
         },
       }
     );
 
+    // Image rotation animation
+    gsap.fromTo(
+      imageRef.current,
+      { rotation: -5 },
+      {
+        rotation: 0,
+        duration: 1.5,
+        delay: 0.5,
+        ease: 'elastic.out(1, 0.5)',
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none reset',
+        },
+      }
+    );
+
+    // Glow effect animation
+    gsap.fromTo(
+      glowRef.current,
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 0.6,
+        scale: 1,
+        duration: 1.5,
+        delay: 0.3,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: glowRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none reset',
+        },
+      }
+    );
+
+    // Text section animations
     gsap.fromTo(
       textRef.current,
       { x: '100%', opacity: 0 },
@@ -42,7 +78,6 @@ const AnimatedSection = () => {
         x: '0%',
         opacity: 1,
         duration: 1,
-        delay: 0.2,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: textRef.current,
@@ -51,53 +86,101 @@ const AnimatedSection = () => {
         },
       }
     );
+
+    // Heading animation
+    gsap.fromTo(
+      headingRef.current,
+      { y: '50px', opacity: 0 },
+      {
+        y: '0',
+        opacity: 1,
+        duration: 1,
+        delay: 0.3,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reset',
+        },
+      }
+    );
+
+    // Paragraph animation
+    gsap.fromTo(
+      paragraphRef.current,
+      { y: '30px', opacity: 0 },
+      {
+        y: '0',
+        opacity: 1,
+        duration: 1,
+        delay: 0.6,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: paragraphRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reset',
+        },
+      }
+    );
+
+    // Create a rotation hover effect for the image
+    const imageElement = imageRef.current;
+    
+    const handleMouseEnter = () => {
+      gsap.to(imageElement, {
+        rotation: 3,
+        scale: 1.03,
+        boxShadow: '0 25px 50px -12px rgba(0, 100, 255, 0.4)',
+        duration: 0.4,
+        ease: 'power2.out'
+      });
+    };
+    
+    const handleMouseLeave = () => {
+      gsap.to(imageElement, {
+        rotation: 0,
+        scale: 1,
+        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+        duration: 0.4,
+        ease: 'power2.out'
+      });
+    };
+    
+    imageElement.addEventListener('mouseenter', handleMouseEnter);
+    imageElement.addEventListener('mouseleave', handleMouseLeave);
+    
+    // Cleanup event listeners
+    return () => {
+      imageElement.removeEventListener('mouseenter', handleMouseEnter);
+      imageElement.removeEventListener('mouseleave', handleMouseLeave);
+    };
   }, []);
-
-  const settings = {
-    autoplay: true,
-    autoplaySpeed: 3000,
-    infinite: true,
-    arrows: false,
-    dots: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
-
- 
 
   return (
     <div className="animated-container">
-      <div className="carousel-section" ref={carouselRef}>
-       
-
-       
- <img src={fawaz2} alt='Fawaz image' className='about-image' loading='lazy'  />
-   {/*  <Carousel>
-      <Carousel.Item interval={1000}>
-        <img src={fawaz2} alt='p1'  />
-         
-      </Carousel.Item>
-      <Carousel.Item interval={800}>
-        <img src={fawaz3} alt='p2'/>
-       
-      </Carousel.Item>
-      
-      <Carousel.Item interval={800}>
-        <img src={fawaz6} alt='p4' />
-       
-      </Carousel.Item>
-    </Carousel> */}
+      <div className="image-section" ref={imageContainerRef}>
+        <div className="image-glow" ref={glowRef}></div>
+        <div className="image-wrapper">
+          <img 
+            src={fawaz2} 
+            alt="Fawaz" 
+            className="about-image" 
+            ref={imageRef}
+            loading="lazy" 
+          />
+        </div>
       </div>
+      
       <div className="text-section" ref={textRef}>
-        <h2>About Me</h2>
-        <p>
-        I'm a software developer, passionate about <span style={{color:'aqua'}}>React</span>  and Web development. I specialize in full-stack <span style={{color:'aqua'}}> (MEARN)</span> and love learning new technologies.
-        My goal is to build innovative, user-friendly solutions that solve real-world problems.
-
-
-        </p>
+        <h2 ref={headingRef} className="animated-heading">About Me</h2>
+        <div ref={paragraphRef} className="bio-text">
+          <p>
+            I'm a software developer, passionate about <span className="highlight">React</span> and Web development. I specialize in full-stack <span className="highlight">(MERN)</span> and love learning new technologies.
+          </p>
+          <p>
+            My goal is to build innovative, user-friendly solutions that solve real-world problems.
+          </p>
+        </div>
       </div>
     </div>
   );

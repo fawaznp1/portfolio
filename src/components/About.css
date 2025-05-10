@@ -1,49 +1,149 @@
 .animated-container {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   flex-direction: row;
+  /*   background-color: #080808;
+ */  padding: 1rem;
 }
 
-.carousel-section {
+/* Image Section Styling */
+.image-section {
   flex: 0 0 40%;
-  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  min-height: 250px;
-  max-height: 85%;
+  position: relative;
+  padding: 2rem;
+  min-height: 300px;
+  max-height: 90vh;
   overflow: hidden;
-  margin-top: 1rem; 
 }
 
-.carousel-section img {
-  width: 95%;
-  height: auto; 
+.image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #2563eb, #8b5cf6, #06b6d4);
   border-radius: 30px;
-  object-fit: cover; 
+  filter: blur(30px);
+  opacity: 0.6;
+  z-index: 1;
 }
 
+.image-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image {
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  transition: all 0.5s ease;
+  transform: rotate(-3deg);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  max-height: 80vh;
+  cursor: pointer;
+}
+
+/* Text Section Styling */
 .text-section {
   flex: 0 0 60%;
-  background: black;
-  color: white;
+  color: white !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
-  font-size: 1.8rem;
-  border-radius: 12px;
-  font-family: "Teko", sans-serif;
-  font-weight: 350;
-  font-style: normal;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+/*   background: linear-gradient(to bottom right, rgba(20, 20, 25, 0.5), rgba(10, 10, 15, 0.8));
+ */  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.text-section h2 {
-  font-size: 2.5rem;
-  text-align: center;
+.animated-heading {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: left;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #fff, #60a5fa, #fff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+.animated-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+.bio-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: "Teko", sans-serif;
+  font-weight: 350;
+  max-width: 800px;
+}
+
+.highlight {
+  color: #60a5fa;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #60a5fa, #8b5cf6);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Animation for the heading gradient */
+@keyframes Aboutshine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Tablets - iPads & below */
@@ -51,96 +151,76 @@
   .animated-container {
     flex-direction: column;
     height: auto;
+    padding: 1rem;
   }
 
-  .carousel-section,
+  .image-section,
   .text-section {
     flex: 0 0 100%;
     width: 100%;
     padding: 1.5rem;
   }
 
+  .image-section {
+    min-height: 250px;
+    margin-bottom: 1rem;
+  }
+
   .text-section {
+    padding: 2rem;
+  }
+
+  .animated-heading {
+    font-size: 2.8rem;
     text-align: center;
-    padding-top: 1rem;
+  }
+
+  .animated-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bio-text {
+    font-size: 1.6rem;
+    text-align: center;
   }
 }
 
 /* Smaller Devices - phones */
 @media (max-width: 576px) {
-  .carousel-section img {
+  .animated-container {
+    padding: 0.5rem;
+  }
+
+  .image-section {
+    padding: 1rem;
+    min-height: 200px;
+  }
+
+  .about-image {
     width: 100%;
-    height: auto; /* Allow the image to resize naturally on small screens */
+    border-radius: 15px;
   }
 
   .text-section {
-    padding: 1.1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .animated-heading {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .bio-text {
     font-size: 1.2rem;
     font-family: "Nova Flat", system-ui;
     font-weight: 400;
-    font-style: normal;
   }
 
-  .text-section h2 {
-    font-size: 2rem;
+  .animated-heading::after {
+    width: 60px;
+    height: 3px;
   }
 }
-
-/* Glow animation for heading */
-h2 {
-  color: hsl(0, 0%, 28%);
-  font-weight: bold !important;
-  letter-spacing: 7px !important;
-  word-spacing: 2px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h2 {
-  padding: 40px;
-  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s infinite linear;
-}
-
-/* 
-
-.about-image-container {
-  position: relative;
-  transform: translateY(2rem);
-  opacity: 0;
-  transition: all 0.7s ease;
-  transition-delay: 0.6s;
-}
-
-.about-image-container.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.about-image-bg {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top right, #2563eb, #8b5cf6);
-  filter: blur(16px);
-  border-radius: 1rem;
-  transform: rotate(-3deg);
-}
-
-.about-image {
-  position: relative;
-  border-radius: 1rem;
-  width: 100%;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  transform: rotate(3deg);
-  transition: transform 0.5s ease;
-}
-
-.about-image:hover {
-  transform: rotate(0);
-}
- */

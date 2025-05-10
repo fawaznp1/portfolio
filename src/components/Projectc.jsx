@@ -38,9 +38,9 @@ function Projects() {
           defaultActiveKey="tab-1"
         >
           <Tab eventKey="tab-1" title="">
-            <Row>
+            <Row >
               {data.slice(0, 3).map((item, index) => (
-                <Col className="mt-1" md={6} sm={12} lg={4} key={index}>
+                <Col className="mt-3" md={6} sm={12} lg={4} key={index}>
                   <div className="d-flex justify-content-center">
                     <Card className="cr" style={{ width: "23rem", height: "19rem" }}>
                       <Card.Img className="object-fit-fill" height={"300px"} variant="top" src={item.imgsrc} loading='lazy' alt={item.alt} />
@@ -53,14 +53,7 @@ function Projects() {
                             <span className="fw-bold">{item.Technolgies}</span>
                           </p>
                         </Card.Text>
-                       {/*  <div className="icon">
-                          <a style={{ border: "0px", marginRight: "5px" }} target="__blank" href={item.github}>
-                            <i style={{ color: "white" }} className="fa-brands fa-github fa-2xl"></i>
-                          </a>
-                          <a style={{ border: "0px" }} target="__blank" href={item.link}>
-                            <i style={{ color: "white" }} className="fa-solid fa-arrow-up-right-from-square fa-2xl"></i>
-                          </a>
-                        </div> */}
+                     
                          <div className="icon flex gap-3 items-center">
       <a 
         style={{ 
@@ -82,7 +75,7 @@ function Projects() {
         onMouseLeave={() => setIsGithubHovered(false)}
       >
         <i style={{ color: "white", marginRight: "0.5rem" }} className="fa-brands fa-github fa-lg"></i>
-        <span className="text-white font-medium">View Source Code</span>
+        <span className="text-white font-medium">Source Code</span>
       </a>
 
       
@@ -133,20 +126,7 @@ function Projects() {
                               <span className="fw-bold">{item.Technolgies}</span>
                             </p>
                           </Card.Text>
-                         {/*  <div className="icon">
-                            <a style={{ border: "0px", marginRight: "5px" }} target="__blank" href={item.github}>
-                              <i style={{ color: "white" }} className="fa-brands fa-github fa-2xl"></i>
-                            </a>
-                            <a 
-                              style={{ border: "0px" }} 
-                              target="__blank" 
-                              href={item.link} 
-                              title="View Live Demo"  // Tooltip text
-                            >
-                           <i style={{ color: "white" }} className="fa-solid fa-arrow-up-right-from-square fa-2xl"></i>
-                            </a>
-
-                          </div> */}
+                        
                            <div className="icon flex gap-3 items-center">
       <a 
         style={{ 
