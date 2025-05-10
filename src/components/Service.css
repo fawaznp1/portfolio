@@ -109,7 +109,7 @@
   font-weight: 800;
   margin: 0 0 20px;
   position: relative;
-/*  -webkit-background-clip: text;
+/*  -webkit-background-clip: text; 
  */ /*  background-clip: text; */
 /*   -webkit-text-fill-color: transparent;
  */  display: inline-block;
@@ -372,6 +372,8 @@
 .services-master-card-action-text-back {
   margin-right: 10px;
 }
+
+
 
 .services-master-card-action-icon-back {
   display: flex;

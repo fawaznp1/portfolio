@@ -9,11 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 import Tabww from './Tabww';
-import htmlimage from '../images/html logo.svg';
-
-import githubimg2 from '../images/github3.svg';
-import reactimg from '../images/react.svg';
-
 
 import Projectc from './Projectc';
 import About from './About';
@@ -89,42 +84,6 @@ function Home() {
 
 
     <Certificate />
-
-{/* <Container className="my-5" id='services'>
-  <h1 className="text-center mb-4"> Services</h1>
-
-  <Row className="mb-4">
-    <Col md={4} className="d-flex justify-content-center mb-2">
-      <div className="service-item text-center">
-        <img src={reactimg} alt="Full Stack Development" className="service-image" />
-        <div className="service-caption">
-          <h5>Full Stack Development</h5>
-          <p>Expert development using React, Node.js, and MongoDB for creating dynamic and scalable applications.</p>
-        </div>
-      </div>
-    </Col>
-
-    <Col md={4} className="d-flex justify-content-center mb-2">
-      <div className="service-item text-center">
-        <img src={htmlimage} alt="Front End Development" className="service-image" />
-        <div className="service-caption">
-          <h5>Front-End Development</h5>
-          <p>Building beautiful, responsive, and interactive user interfaces using HTML, CSS, and JavaScript.</p>
-        </div>
-      </div>
-    </Col>
-
-    <Col md={4} className="d-flex justify-content-center mb-2">
-      <div className="service-item text-center">
-        <img src={githubimg2} alt="Code Hosting" className="service-image" />
-        <div className="service-caption">
-          <h5>Code Hosting & Collaboration</h5>
-          <p>Efficient code hosting services with version control and collaboration features for seamless development.</p>
-        </div>
-      </div>
-    </Col>
-  </Row>
-</Container> */}
 
 <ServicesSection />
 

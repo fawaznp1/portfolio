@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
-import ieltsPreview from '../images/IELTS SCORE_page-0002.jpg';     // smaller preview image
-import ieltsFull from '../images/IELTS SCORE_page-0001.jpg';           // larger/full image for modal
+import ieltsPreview from '../images/IELTS SCORE_page-0002.jpg';     
+import ieltsFull from '../images/IELTS SCORE_page-0001.jpg';           
 import nactetPreview from '../images/NACTET_page-0002.jpg';
 import nactetFull from '../images/NACTET_page-0001.jpg';
 import react1p from '../images/react1.png';

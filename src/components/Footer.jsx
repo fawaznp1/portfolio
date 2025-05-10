@@ -18,7 +18,7 @@ export default function App() {
     }, []);
 
   return (
-    <MDBFooter className='bg-dark text-center text-white '>
+    <MDBFooter className=' text-center text-white' style={{backgroundColor:'#0a0f1a  '}}>
      
       <MDBContainer className='p-3 pb-2'>
       <p className=''>Feel free to get in touch!</p>
