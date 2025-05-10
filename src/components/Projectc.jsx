@@ -33,9 +33,9 @@ function Projects() {
       <div className="mb-1">
         <Tabs
           justify
-          variant="underline"
-          className="text-white"
-          defaultActiveKey="tab-1"
+/*           variant="underline"
+  */          /* className="text-white"
+            defaultActiveKey="tab-1" */
         >
           <Tab eventKey="tab-1" title="">
             <Row >

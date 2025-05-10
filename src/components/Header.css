@@ -8,6 +8,8 @@
 .nav-link.active {
   font-weight: bold;
   color: #f1f4f6;
+  /* Add a glowing effect for active link */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .nav-link::after {
@@ -26,6 +28,12 @@
   backdrop-filter: blur(10px);
 }
 
+.nav-link.active::after {
+  width: 100%; /* Always show underline for active link */
+  background-color: #00a8ff; /* Different color for active link underline */
+  box-shadow: 0 0 8px rgba(0, 168, 255, 0.8); /* Glow effect on underline */
+}
+
 .nav-link:hover::after {
   width: 100%;
 }
@@ -33,7 +41,21 @@
 .navbar {
   background-color: rgb(109, 238, 238);
   font-weight: bold;
- /*  font-family: "Rubik Scribble", system-ui;
+  /* font-family: "Rubik Scribble", system-ui;
   font-weight: 700;
   font-style: oblique; */
+}
+
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs .nav-link {
+  border: none !important;
+}
+
+.nav-tabs .nav-link.active {
+  border: none !important;
+  background-color: transparent;
+  color: white; /* Optional: keep the active text white */
 }

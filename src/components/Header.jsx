@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,14 +7,54 @@ import './Header.css';
 
 function BasicExample() {
   const [expanded, setExpanded] = useState(false);
-  const [activeLink, setActiveLink] = useState('home'); // Set initial active link
+  const [activeLink, setActiveLink] = useState('home');
 
   const handleToggle = () => setExpanded(prev => !prev);
   const handleClose = () => setExpanded(false);
 
   const handleSetActive = (link) => {
     setActiveLink(link);
-  }; 
+  };
+
+  // Add scroll event listener to detect which section is in view
+  useEffect(() => {
+    const sections = [
+      { id: 'home', element: document.getElementById('home') || document.querySelector('main') }, 
+      { id: 'about', element: document.getElementById('about') },
+      { id: 'projects', element: document.getElementById('projects') },
+      { id: 'certificates', element: document.getElementById('certificates') },
+      { id: 'services', element: document.getElementById('services') },
+      { id: 'contact', element: document.getElementById('contact') }
+    ];
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100; // Adding offset for navbar height
+
+      // Find the current section in view
+      for (const section of sections) {
+        if (section.element) {
+          const offsetTop = section.element.offsetTop;
+          const offsetHeight = section.element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveLink(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    // Initial check on mount
+    setTimeout(handleScroll, 100);
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Navbar expanded={expanded} expand="lg" className="bg-body-dark mx-auto sticky-top">
@@ -58,7 +98,6 @@ function BasicExample() {
             >
               Services
             </Nav.Link>
-            
             <Nav.Link
               href="#contact"
               className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}
