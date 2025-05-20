@@ -19,8 +19,8 @@ export const data =[
        
        {
        
-              title: 'Marwa arts.in',
-              desc: 'Marwa Arts is a full-stack web application designed for selling handcrafted artworks, featuring a clean UI, responsive design, and smooth shopping experience. ',
+              title: 'Marwa Arts.in',
+              desc: 'Marwa Arts is a full-stack e-commerce platform tailored for selling handcrafted artwork, offering a sleek user interface, responsive design, and a seamless shopping experience. ',
               Technolgies :'React,JS,Node,MongoDB,Express, Bootstrap, Html & CSS',
               imgsrc: w9,
               github:'https://github.com/fawaznp1/marwaf',
