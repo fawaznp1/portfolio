@@ -6,8 +6,6 @@ import Container from 'react-bootstrap/Container';
 import './Home.css'; 
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
 import Tabww from './Tabww';
 
 import Projectc from './Projectc';

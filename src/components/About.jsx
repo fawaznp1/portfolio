@@ -3,8 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
 import fawaz2 from '../images/fawaz2.jpg';
-import fawaz3 from '../images/fawaz3.jpg';
-import fawaz6 from '../images/fawaz6.jpg';
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -177,7 +175,7 @@ const AnimatedSection = () => {
           <p>
             I'm a software developer, passionate about <span className="highlight">React</span> and Web development. I specialize in full-stack <span className="highlight">(MERN)</span> and love learning new technologies.
           </p>
-          <p>
+          <p> 
             My goal is to build innovative, user-friendly solutions that solve real-world problems.
           </p>
         </div>

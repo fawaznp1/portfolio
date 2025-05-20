@@ -9,6 +9,7 @@ import w7 from '../images/webp/safej.webp'
 import w8 from '../images/webp/jillion.webp'
 import w9 from '../images/webp/marwa1.webp'
 import w10 from '../images/webp/urban.webp'
+import w11 from '../images/webp/ashter.webp'
 
 
 
@@ -29,7 +30,18 @@ export const data =[
             
 },
 
+{
+       
+              title: 'Ashter',
+              desc: 'Ashter is an online doctor appointment system that simplifies healthcare access by allowing patients to easily book, manage, and track appointments.',
+              Technolgies :'React,JS,Bootstrap,Html,CSS',
+              imgsrc: w11,
+              github:'https://github.com/fawaznp1/Ashter',
+              link:'https://ashter.vercel.app/',
+              alt:' ashter image',
 
+            
+},
 
 {
        
@@ -127,7 +139,7 @@ export const data =[
 
       
 },
-{
+/* {
     title: 'Jillion Technologies',
     desc: 'A Bootstrap corporate website featuring services, client testimonials, and a responsive design with contact forms for seamless user experience.',
     Technolgies :'JS,Bootstrap,Html,CSS',
@@ -139,7 +151,7 @@ export const data =[
 
       
 },
-
+ */
 
 
 ]
