@@ -59,7 +59,7 @@ function BasicExample() {
   return (
     <Navbar expanded={expanded} expand="lg" className="bg-body-dark mx-auto sticky-top">
       <Container>
-        <Navbar.Brand href="/" id="fawaznpnavbar">Fawaz N P</Navbar.Brand>
+        <Navbar.Brand href="/" id="fawaznpnavbar" className='ms-5'>Fawaz N P</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto justify-content-center">

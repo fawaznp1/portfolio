@@ -49,8 +49,8 @@ export default function App() {
   <MDBIcon fab icon='twitter' />
 </MDBBtn>
 
-<MDBBtn style={{ backgroundColor: '#D44638' }} className='m-1' href="mailto:fawazpathukkalan@gmail.com" role='button' target='_blank'
-  data-bs-toggle="tooltip" data-bs-placement="top" title="fawazpathukkalan@gmail.com" >
+<MDBBtn style={{ backgroundColor: '#D44638' }} className='m-1' href="mailto:fawaznpj  @gmail.com" role='button' target='_blank'
+  data-bs-toggle="tooltip" data-bs-placement="top" title="fawaznpj@gmail.com" >
   <i className="fa-regular fa-envelope"></i>
 </MDBBtn>
 
@@ -61,9 +61,7 @@ export default function App() {
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
       © {currentYear} Copyright&reg;
       : fawaz_np
-      {/* <a className='text-white' href='/'>
-        
-      </a> */}
+      
     </div>
     </MDBFooter>
   );

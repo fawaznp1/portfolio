@@ -33,6 +33,7 @@ function Projects() {
       <div className="project-tabs-container">
        <Tabs justify className="custom-tabs" variant="pills">
           <Tab eventKey="tab-1" title="" className="custom-tab">
+            
             <Row>
               {data.slice(0, 3).map((item, index) => (
                 <Col className="mt-3" md={6} sm={12} lg={4} key={index}>

@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { Card,Col,Row } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
 import './Home.css'; 
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Tabww from './Tabww';
-
 import Projectc from './Projectc';
 import About from './About';
 import Certificate from './Certificate';
@@ -72,10 +66,8 @@ function Home() {
     <About />
     </div>
 
-{/* tabs*/}
 <Tabww />
 
-{/* pojects */}
 <h1 className='text-center' id='projects'>My Projects</h1>
   
     <Projectc />
