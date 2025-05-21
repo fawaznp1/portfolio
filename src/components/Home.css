@@ -46,8 +46,8 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-size: 2rem !important;
+h1  {
+  font-size: 2.4rem !important;
   font-weight: bold !important;
   letter-spacing: 7px !important;
   word-spacing: 2px;
@@ -58,7 +58,7 @@ h1 {
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   color: hsl(0, 0%, 28%);
-  padding: 52px;
+  padding: 32px;
   background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -227,9 +227,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-.certificates h1 {
-  font-size: 1.7rem;
-}
 
 .certificate-item {
   display: flex;

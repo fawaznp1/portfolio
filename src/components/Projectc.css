@@ -1,7 +1,148 @@
+/* Project Container Styles */
+.project-wrapper {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-tabs-container {
+  margin-bottom: 1rem;
+}
+
+/* Card Container and Layout */
+.project-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-card {
+  width: 25rem;
+  height: 19rem;
+  position: relative;
+  border: 5px solid rgb(255, 255, 255);
+  overflow: hidden;
+  max-width: 400px;
+}
+
+/* Image Styles */
+.project-card-image {
+  object-fit: fill;
+  height: 17rem;
+   width: 100%;
+
+ }
+
+/* Card Body Styles */
+.project-card-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: aliceblue;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  bottom: -86%;
+  transition: 2s;
+}
+
+.project-card:hover .project-card-body {
+  bottom: 0%;
+  background: rgb(12, 11, 11);
+}
+
+.project-card-title {
+  color: white !important;
+}
+
+.project-card-text {
+  color: white;
+  margin-top: 0.5rem;
+  font-size: 14px;
+}
+
+.project-technologies {
+  margin-top: 0.75rem;
+}
+
+.project-technologies-list {
+  font-weight: bold;
+}
+
+/* Link Buttons Styles */
+.project-links-container {
+  position: absolute;
+  top: 170px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.project-github-link {
+  border: 0px;
+  margin-right: 5px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: #24292e;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.project-github-link.github-hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-live-link {
+  border: 0px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.project-live-link.live-hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-icon {
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.project-link-text {
+  color: white;
+  font-weight: 500;
+}
+
+/* See More Button Styles */
+.project-button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
 .see-more-btn {
   padding: 10px 25px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: bold; 
   color: #fff;
   background: linear-gradient(135deg, #21b8e2, #025874);
   border: none;
@@ -16,45 +157,16 @@
   box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
 }
 
-   .project-wrapper {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow-x: hidden; /* prevent horizontal scroll */
-  }
-  
-  
-  .icon{
-         position: absolute;
-         top: 170px;
-  }
-  
-  .card{
-           position: relative; 
-           width: 100%;
-           max-width: 400px;
-         border: 5px solid rgb(255, 255, 255);
-         overflow: hidden;
-     }
-     
-     
-     .card-body{
-         width: 100%;
-         height: 100%;
-         position: absolute;
-         color: aliceblue;
-         background: #00000038;
-         backdrop-filter: blur(5px);
-         border-top-right-radius: 10px;
-         border-top-left-radius: 10px;
-         bottom:-86%;
-         transition: 2s;
-         
-         
-     }
-     .card:hover .card-body{
-         bottom: 0%;
-         background: rgb(12, 11, 11);
-         
-     }
 
+/* Custom tabs without lines */
+.custom-tabs {
+  background: transparent;
+}
+
+.custom-tabs .nav-item {
+  display: none; /* Hide the empty tabs completely */
+}
+
+.custom-tab {
+  padding-top: 0;
+}

@@ -97,6 +97,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
+  color: white;
 }
 
 .services-master-header.animate-in {
@@ -120,7 +121,7 @@
   font-weight: 400;
  /*  color: var(--secondary-text); */
  color: white;
-  max-width: 700px;
+  max-width: 850px;
   margin: 0 auto 30px;
   line-height: 1.6;
 }
@@ -186,7 +187,7 @@
 .services-master-card-front,
 .services-master-card-back {
   position: absolute;
-  width: 100%;
+  width: 100%; 
   height: 100%;
   backface-visibility: hidden;
   border-radius: var(--card-radius);

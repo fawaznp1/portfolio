@@ -68,7 +68,7 @@ const ServicesSection = () => {
       <div className="services-master-container ">
         <div className={`services-master-header ${isVisible ? 'animate-in' : ''}`}>
          
-          <h2 className="services-master-title ">SERVICES</h2>
+          <h1 className="services-master-title ">SERVICES</h1>
           <p className="services-master-subtitle">
             Cutting-edge solutions tailored to meet your business needs with unparalleled expertise and innovation
           </p>
@@ -134,7 +134,7 @@ const ServicesSection = () => {
                     </span> */}
                   </div>
                 </div>
-              </div>
+              </div> 
               
               {activeCard === service.id && (
                 <div className="services-master-card-glows">

@@ -9,7 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 function Projects() {
   const [showAll, setShowAll] = useState(false);
   const extraProjectsRef = useRef(null); // for scroll
-   const [isGithubHovered, setIsGithubHovered] = useState(false);
+  const [isGithubHovered, setIsGithubHovered] = useState(false);
   const [isLiveHovered, setIsLiveHovered] = useState(false);
 
   const handleToggle = () => {
@@ -29,80 +29,50 @@ function Projects() {
   }, []);
 
   return (
-    <div className="project-wrapper d-flex justify-content-center flex-column">
-      <div className="mb-1">
-        <Tabs
-          justify
-/*           variant="underline"
-  */          /* className="text-white"
-            defaultActiveKey="tab-1" */
-        >
-          <Tab eventKey="tab-1" title="">
-            <Row >
+    <div className="project-wrapper">
+      <div className="project-tabs-container">
+       <Tabs justify className="custom-tabs" variant="pills">
+          <Tab eventKey="tab-1" title="" className="custom-tab">
+            <Row>
               {data.slice(0, 3).map((item, index) => (
                 <Col className="mt-3" md={6} sm={12} lg={4} key={index}>
-                  <div className="d-flex justify-content-center">
-                    <Card className="cr" style={{ width: "23rem", height: "19rem" }}>
-                      <Card.Img className="object-fit-fill" height={"300px"} variant="top" src={item.imgsrc} loading='lazy' alt={item.alt} />
-                      <Card.Body>
-                        <Card.Title className="text-white">{item.title}</Card.Title>
-                        <Card.Text className="text-white mt-2" style={{ fontSize: "12px" }}>
+                  <div className="project-card-container">
+                    <Card className="project-card cr">
+                      <Card.Img className="project-card-image" variant="top" src={item.imgsrc} loading='lazy' alt={item.alt} />
+                      <Card.Body className="project-card-body">
+                        <Card.Title className="project-card-title">{item.title}</Card.Title>
+                        <Card.Text className="project-card-text">
                           {item.desc}
-                          <p className="mt-3">
+                          <p className="project-technologies">
                             Technologies used:
-                            <span className="fw-bold">{item.Technolgies}</span>
+                            <span className="project-technologies-list">{item.Technolgies}</span>
                           </p>
                         </Card.Text>
                      
-                         <div className="icon flex gap-3 items-center">
-      <a 
-        style={{ 
-          border: "0px",
-          marginRight: "5px",
-          position: "relative",
-          display: "inline-flex",
-          alignItems: "center",
-          backgroundColor: isGithubHovered ? "#333" : "#24292e",
-          padding: "0.5rem 1rem",
-          borderRadius: "0.375rem",
-          transition: "all 0.3s ease",
-          transform: isGithubHovered ? "translateY(-2px)" : "translateY(0)",
-          boxShadow: isGithubHovered ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",textDecoration: "none"
-        }} 
-        target="__blank" 
-        href={item.github}
-        onMouseEnter={() => setIsGithubHovered(true)}
-        onMouseLeave={() => setIsGithubHovered(false)}
-      >
-        <i style={{ color: "white", marginRight: "0.5rem" }} className="fa-brands fa-github fa-lg"></i>
-        <span className="text-white font-medium">Source Code</span>
-      </a>
-
-      
-      
-      <a
-        style={{ 
-          border: "0px",
-          position: "relative",
-          display: "inline-flex",
-          alignItems: "center",
-          backgroundColor: isLiveHovered ? "#0056b3" : "#007bff",
-          padding: "0.5rem 1rem",
-          borderRadius: "0.375rem",
-          transition: "all 0.3s ease",
-          transform: isLiveHovered ? "translateY(-2px)" : "translateY(0)",
-          boxShadow: isLiveHovered ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none"
-        }}
-        target="__blank" 
-        href={item.link}
-        title="View Live Demo"
-        onMouseEnter={() => setIsLiveHovered(true)}
-        onMouseLeave={() => setIsLiveHovered(false)}
-      >
-        <i style={{ color: "white", marginRight: "0.5rem" }} className="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
-        <span className="text-white font-medium">Preview Site</span>
-      </a>
-                         </div>
+                        <div className="project-links-container">
+                          <a 
+                            className={`project-github-link ${isGithubHovered ? 'github-hover' : ''}`}
+                            target="__blank" 
+                            href={item.github}
+                            onMouseEnter={() => setIsGithubHovered(true)}
+                            onMouseLeave={() => setIsGithubHovered(false)}
+                          >
+                            <i className="fa-brands fa-github fa-lg project-icon"></i>
+                            <span className="project-link-text">Source Code</span>
+                          </a>
+                          
+                          <a
+                            className={`project-live-link ${isLiveHovered ? 'live-hover' : ''}`}
+                            target="__blank" 
+                            href={item.link}
+                            title="View Live Demo"
+                            onMouseEnter={() => setIsLiveHovered(true)}
+                            onMouseLeave={() => setIsLiveHovered(false)}
+                          >
+                            <i className="fa-solid fa-arrow-up-right-from-square fa-lg project-icon"></i>
+                            <span className="project-link-text">Preview Site</span>
+                          </a>
+                        </div>
                       </Card.Body>
                     </Card>
                   </div>
@@ -114,66 +84,43 @@ function Projects() {
               <Row ref={extraProjectsRef}>
                 {data.slice(3).map((item, index) => (
                   <Col className="mt-4" md={6} sm={12} lg={4} key={index + 3}>
-                    <div className="d-flex justify-content-center">
-                      <Card className="cr" style={{ width: "23rem", height: "19rem" }}>
-                        <Card.Img className="object-fit-fill" height={"300px"} variant="top" src={item.imgsrc} />
-                        <Card.Body>
-                          <Card.Title className="text-white">{item.title}</Card.Title>
-                          <Card.Text className="text-white mt-2" style={{ fontSize: "12px" }}>
+                    <div className="project-card-container">
+                      <Card className="project-card cr">
+                        <Card.Img className="project-card-image" variant="top" src={item.imgsrc} />
+                        <Card.Body className="project-card-body">
+                          <Card.Title className="project-card-title">{item.title}</Card.Title>
+                          <Card.Text className="project-card-text">
                             {item.desc}
-                            <p className="mt-3">
+                            <p className="project-technologies">
                               Technologies used:
-                              <span className="fw-bold">{item.Technolgies}</span>
+                              <span className="project-technologies-list">{item.Technolgies}</span>
                             </p>
                           </Card.Text>
                         
-                           <div className="icon flex gap-3 items-center">
-      <a 
-        style={{ 
-          border: "0px",
-          marginRight: "5px",
-          position: "relative",
-          display: "inline-flex",
-          alignItems: "center",
-          backgroundColor: isGithubHovered ? "#333" : "#24292e",
-          padding: "0.5rem 1rem",
-          borderRadius: "0.375rem",
-          transition: "all 0.3s ease",
-          transform: isGithubHovered ? "translateY(-2px)" : "translateY(0)",
-          boxShadow: isGithubHovered ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",textDecoration: "none"
-        }} 
-        target="__blank" 
-        href={item.github}
-        onMouseEnter={() => setIsGithubHovered(true)}
-        onMouseLeave={() => setIsGithubHovered(false)}
-      >
-        <i style={{ color: "white", marginRight: "0.5rem" }} className="fa-brands fa-github fa-lg"></i>
-        <span className="text-white font-medium">View Source Code</span>
-      </a>
-      
-      <a
-        style={{ 
-          border: "0px",
-          position: "relative",
-          display: "inline-flex",
-          alignItems: "center",
-          backgroundColor: isLiveHovered ? "#0056b3" : "#007bff",
-          padding: "0.5rem 1rem",
-          borderRadius: "0.375rem",
-          transition: "all 0.3s ease",
-          transform: isLiveHovered ? "translateY(-2px)" : "translateY(0)",
-          boxShadow: isLiveHovered ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none"
-        }}
-        target="__blank"
-        href={item.link}
-        title="View Live Demo"
-        onMouseEnter={() => setIsLiveHovered(true)}
-        onMouseLeave={() => setIsLiveHovered(false)}
-      >
-        <i style={{ color: "white", marginRight: "0.5rem" }} className="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
-        <span className="text-white font-medium">Preview Site</span>
-      </a>
-                         </div>
+                          <div className="project-links-container">
+                            <a 
+                              className={`project-github-link ${isGithubHovered ? 'github-hover' : ''}`}
+                              target="__blank" 
+                              href={item.github}
+                              onMouseEnter={() => setIsGithubHovered(true)}
+                              onMouseLeave={() => setIsGithubHovered(false)}
+                            >
+                              <i className="fa-brands fa-github fa-lg project-icon"></i>
+                              <span className="project-link-text">Source Code</span>
+                            </a>
+                            
+                            <a
+                              className={`project-live-link ${isLiveHovered ? 'live-hover' : ''}`}
+                              target="__blank"
+                              href={item.link}
+                              title="View Live Demo"
+                              onMouseEnter={() => setIsLiveHovered(true)}
+                              onMouseLeave={() => setIsLiveHovered(false)}
+                            >
+                              <i className="fa-solid fa-arrow-up-right-from-square fa-lg project-icon"></i>
+                              <span className="project-link-text">Preview Site</span>
+                            </a>
+                          </div>
                         </Card.Body>
                       </Card>
                     </div>
@@ -182,7 +129,7 @@ function Projects() {
               </Row>
             )}
 
-            <div className="text-center mt-4">
+            <div className="project-button-container">
               <button className="see-more-btn" onClick={handleToggle}>
                 {showAll ? "Show Less" : "See More Projects"}
               </button>

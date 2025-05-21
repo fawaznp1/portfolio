@@ -74,8 +74,8 @@
 }
 
 .animated-heading {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 3rem !important;
+  margin-bottom: 1.5rem !important;
   color: white;
   font-weight: 600;
   letter-spacing: 3px;
@@ -92,7 +92,7 @@
 .animated-heading::after {
   content: '';
   position: absolute;
-  left: 0;
+/*   left: 0; */
   bottom: -10px;
   width: 80px;
   height: 4px;

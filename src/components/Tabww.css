@@ -1,4 +1,29 @@
-/* Base styles */
+
+
+ h2 {
+   font-size: 1.4rem !important;
+  font-weight: bold !important;
+  letter-spacing: 7px !important;
+  word-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: hsl(0, 0%, 28%);
+  padding: 22px;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+
+
+
+
+
 .main-profile-section {
   padding: 2rem;
   background-color: #000000;
