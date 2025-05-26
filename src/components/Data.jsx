@@ -1,15 +1,18 @@
 
 import w1 from '../images/webp/netflix.webp'
-import w2 from '../images/webp/auto hoirzon.webp'
 import w3 from '../images/webp/media.webp'
 import w4 from '../images/webp/restaurant.webp'
 import w5 from '../images/webp/bmw.webp'
 import w6 from '../images/webp/weather.webp'
 import w7 from '../images/webp/safej.webp'
-import w8 from '../images/webp/jillion.webp'
 import w9 from '../images/webp/marwa1.webp'
 import w10 from '../images/webp/urban.webp'
 import w11 from '../images/webp/ashter.webp'
+import w8 from '../images/webp/auto.webp'
+import w12 from '../images/webp/RouteX.webp'
+import w13 from '../images/webp/QRC.webp'
+
+
 
 
 
@@ -67,6 +70,17 @@ export const data =[
 
          
 },
+{
+       title: 'Auto Horizon',
+       desc: 'A React-based automotive blog featuring articles, car reviews, industry news, and a responsive layout designed for smooth navigation and visual appeal.',
+       Technolgies :'React,JS,Bootstrap,Html,CSS',
+       imgsrc: w8,
+       github:'https://github.com/fawaznp1/Auto-Horizon',
+       link:'https://auto-horizon.vercel.app/',
+       alt:'autohorizon image',
+
+         
+},
        {
        
               title: 'Netflix (clone)',
@@ -78,6 +92,17 @@ export const data =[
               alt:'netflix image',
 
             
+},
+{
+       title: 'BMW',
+       desc: 'A React-based BMW clone featuring a luxury car gallery, sleek UI, car details, booking form, responsive design, animations, and real-time data from a car API for enhanced user experience.',
+       Technolgies :'React,JS,Bootstrap,Html,CSS',
+       imgsrc: w5,
+       github:'https://github.com/fawaznp1/food-circle',
+       link:'https://bmw-fz.vercel.app/',
+       alt:'bmw image',
+
+         
 },
 
 
@@ -93,27 +118,26 @@ export const data =[
 
          
 },
-{
-       title: 'BMW',
-       desc: 'A React-based BMW clone featuring a luxury car gallery, sleek UI, car details, booking form, responsive design, animations, and real-time data from a car API for enhanced user experience.',
-       Technolgies :'React,JS,Bootstrap,Html,CSS',
-       imgsrc: w5,
-       github:'https://github.com/fawaznp1/food-circle',
-       link:'https://bmw-fz.vercel.app/',
-       alt:'bmw image',
 
-         
+{
+    title: 'QR Code Generator',
+    desc: 'A modern QR code generator app built with React. Users can create custom QR codes for URLs, text, or contact info. Features dynamic QR previews, download functionality, and a sleek, responsive design.',
+    Technolgies: 'React,JS,Html,CSS',
+    imgsrc: w13, 
+    github: 'https://github.com/fawaznp1/Qrcode-generator',
+    link: 'https://qrcode-generator-xi-five.vercel.app/',
+    alt: 'QR code generator image',
 },
-{
-       title: 'Auto Horizon',
-       desc: 'A React-based automotive blog featuring articles, car reviews, industry news, and a responsive layout designed for smooth navigation and visual appeal.',
-       Technolgies :'React,JS,Bootstrap,Html,CSS',
-       imgsrc: w2,
-       github:'https://github.com/fawaznp1/autohorizon1',
-       link:'https://autohorizon.vercel.app/',
-       alt:'autohorizon image',
 
-         
+
+{
+    title: 'RouteX',
+    desc: 'A React-based travel agency app allowing users to plan trips with ease. Features a modern UI, user-friendly & responsive design',
+    Technolgies: 'React,JS,Bootstrap,Html,CSS',
+    imgsrc: w12, 
+    github: 'https://github.com/fawaznp1/RouteX-journey',
+    link: 'https://route-x-journey.vercel.app/',
+    alt: 'Routex image',
 },
 {
        title: 'WeatherCraze',
@@ -139,19 +163,6 @@ export const data =[
 
       
 },
-/* {
-    title: 'Jillion Technologies',
-    desc: 'A Bootstrap corporate website featuring services, client testimonials, and a responsive design with contact forms for seamless user experience.',
-    Technolgies :'JS,Bootstrap,Html,CSS',
-    imgsrc: w8,
-    github:'https://github.com/fawaznp1/jtechno2',
-    link:'https://jtechno.vercel.app/',
-    alt:'jtechno image',
-
-
-      
-},
- */
 
 
 ]

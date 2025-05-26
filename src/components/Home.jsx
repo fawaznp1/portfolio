@@ -19,8 +19,8 @@ function Home() {
   return (
     <>
     <div className="home-container" >
-      <div className="overlay">
-        <div className="content">
+      <div className="overlay" id='home'>
+        <div className="content" id='home'>
           <h1 className='fawazheading mb-4' style={{ marginRight: '15px' }} >
           {/* {text.split('').map((letter, index) => (
         <span key={index}>{letter}</span>
