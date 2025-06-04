@@ -95,10 +95,10 @@ export const data =[
 },
 {
        title: 'BMW',
-       desc: 'A React-based BMW clone featuring a luxury car gallery, sleek UI, car details, booking form, responsive design, animations, and real-time data from a car API for enhanced user experience.',
+       desc: 'A React-based BMW clone featuring a luxury car gallery, sleek UI, car details, booking form, animations, and real-time data from a car API for enhanced user experience.',
        Technolgies :'React,JS,Bootstrap,Html,CSS',
        imgsrc: w5,
-       github:'https://github.com/fawaznp1/food-circle',
+       github:'https://github.com/fawaznp1/bmw',
        link:'https://bmw-fz.vercel.app/',
        alt:'bmw image',
 
