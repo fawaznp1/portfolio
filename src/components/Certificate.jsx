@@ -1,6 +1,8 @@
 
-import React, { useState } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ieltsPreview from '../images/IELTS SCORE_page-0002.jpg';     
 import ieltsFull from '../images/IELTS SCORE_page-0001.jpg';           
 import nactetPreview from '../images/NACTET_page-0002.jpg';
@@ -9,6 +11,8 @@ import react1p from '../images/react1.png';
 import react1f from '../images/react1.png';
 import js1p from '../images/js1.png';
 import js1f from '../images/js1.png';
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 
@@ -17,6 +21,7 @@ function Certificates() {
   const [modalImage, setModalImage] = useState('');
   const [modalTitle, setModalTitle] = useState('');
   const [modalDescription, setModalDescription] = useState('');
+  const certificatesRef = useRef(null);
 
   const handleShow = (img, title, desc) => {
     setModalImage(img);
@@ -27,8 +32,25 @@ function Certificates() {
 
   const handleClose = () => setShowModal(false);
 
+  useEffect(() => {
+    const certItems = certificatesRef.current.querySelectorAll('.certificate-item');
+    gsap.fromTo(certItems,
+      { opacity: 0, rotateY: 90 },
+      {
+        opacity: 1,
+        rotateY: 0,
+        duration: 1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: certificatesRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+  }, []);
+
   return (
-    <Container className="certificates my-5 mb-4" id="certificates">
+    <Container className="certificates my-5 mb-4" id="certificates" ref={certificatesRef}>
       <h1 className="certify text-center mb-4">Certificates</h1>
 
       <Row className="mb-2">

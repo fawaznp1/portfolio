@@ -1,6 +1,8 @@
 import './Home.css'; 
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import Tabww from './Tabww';
 import Projectc from './Projectc';
 import About from './About';
@@ -10,17 +12,26 @@ import ServicesSection from './Service';
 
 function Home() {
     const text = "Hello! I Am Fawaz N P";
+    const contentRef = useRef(null);
 
     const handleButtonClick = () => {
       toast.success('Resume Downloaded..!');
-    }; 
+    };
+
+    useEffect(() => {
+      const tl = gsap.timeline();
+      tl.fromTo(contentRef.current, 
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+      );
+    }, []); 
 
 
   return (
     <>
     <div className="home-container" >
       <div className="overlay" id='home'>
-        <div className="content" id='home'>
+        <div className="content" id='home' ref={contentRef}>
           <h1 className='fawazheading mb-4' style={{ marginRight: '15px' }} >
           {/* {text.split('').map((letter, index) => (
         <span key={index}>{letter}</span>

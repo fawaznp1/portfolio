@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Service.css';
+
+
 
 // Import your images
 import reactimg from '../images/react.svg';
 import htmlimage from '../images/html logo.svg';
 import githubimg2 from '../images/github1.svg';
+gsap.registerPlugin(ScrollTrigger);
 
 const ServicesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCard, setActiveCard] = useState(null);
+  const servicesRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,6 +29,21 @@ const ServicesSection = () => {
     
     const section = document.querySelector('.services-master-section');
     if (section) observer.observe(section);
+
+    const serviceCards = servicesRef.current.querySelectorAll('.services-master-card');
+    gsap.fromTo(serviceCards,
+      { opacity: 0, x: -100 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: servicesRef.current,
+          start: "top 80%"
+        }
+      }
+    );
     
     return () => observer.disconnect();
   }, []);
@@ -79,7 +100,7 @@ const ServicesSection = () => {
           </div>
         </div>
         
-        <div className="services-master-cards">
+        <div className="services-master-cards" ref={servicesRef}>
           {services.map((service, index) => (
             <div 
               key={service.id}

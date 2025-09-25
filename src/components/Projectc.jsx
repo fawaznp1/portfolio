@@ -4,12 +4,17 @@ import { Col, Row, Tab, Tabs } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { data } from "../components/Data";
 import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { FaSquareArrowUpRight } from 'react-icons/fa6';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
   const [showAll, setShowAll] = useState(false);
   const extraProjectsRef = useRef(null); // for scroll
+  const projectsRef = useRef(null);
   const [isGithubHovered, setIsGithubHovered] = useState(false);
   const [isLiveHovered, setIsLiveHovered] = useState(false);
 
@@ -27,10 +32,25 @@ function Projects() {
   useEffect(() => {
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(el => new window.bootstrap.Tooltip(el));
+
+    const projectCards = projectsRef.current.querySelectorAll('.project-card-container');
+    gsap.fromTo(projectCards,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: projectsRef.current,
+          start: "top 80%"
+        }
+      }
+    );
   }, []);
 
   return (
-    <div className="project-wrapper">
+    <div className="project-wrapper" ref={projectsRef}>
       <div className="project-tabs-container">
        <Tabs justify className="custom-tabs" variant="pills">
           <Tab eventKey="tab-1" title="" className="custom-tab">

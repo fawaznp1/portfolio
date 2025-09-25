@@ -5,15 +5,37 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 export default function App() {
-    const currentYear = new Date().getFullYear(); 
+    const currentYear = new Date().getFullYear();
+    const footerRef = useRef(null); 
 
     useEffect(() => {
       const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
       tooltipTriggerList.map(el => new window.bootstrap.Tooltip(el));
+
+      const socialBtns = footerRef.current.querySelectorAll('.btn');
+      gsap.fromTo(socialBtns,
+        { opacity: 0, y: 30, scale: 0.8 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "bounce.out",
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top 90%"
+          }
+        }
+      );
     }, []);
 
   return (
@@ -21,7 +43,7 @@ export default function App() {
       backgroundColor: '#0a0f1a',
       borderTop: '1px solid rgba(255,255,255,0.1)'
     }}>
-      <MDBContainer className='p-3 pb-1'>
+      <MDBContainer className='p-3 pb-1' ref={footerRef}>
         <p className='mb-2' style={{
           fontSize: '1.1rem',
           fontWeight: '300',

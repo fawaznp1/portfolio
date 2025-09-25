@@ -13,12 +13,52 @@ import {
   
 } from 'react-icons/fa';
 import { SiMongodb, SiVercel,  SiTypescript  } from 'react-icons/si';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './Tabww.css';
 import { LuBriefcaseBusiness } from 'react-icons/lu';
 import { RiTailwindCssFill } from 'react-icons/ri';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ProfileSection = () => {
+  const skillsRef = useRef(null);
+  const timelineRef = useRef(null);
+
+  useEffect(() => {
+    const skillItems = skillsRef.current.querySelectorAll('.skill-item');
+    const timelineItems = timelineRef.current.querySelectorAll('.timeline-item');
+
+    gsap.fromTo(skillItems, 
+      { opacity: 0, scale: 0.8 },
+      { 
+        opacity: 1, 
+        scale: 1, 
+        duration: 0.6, 
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: skillsRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    gsap.fromTo(timelineItems,
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: timelineRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+  }, []);
   const skills = [
   { name: 'React', icon: <FaReact className="skill-icon react" /> },
   { name: 'Angular', icon: <FaAngular className="skill-icon angular" /> },
@@ -80,7 +120,7 @@ const ProfileSection = () => {
     <div className="main-profile-section">
       <div className="profile-grid">
         {/* Skills Section */}
-        <div className="skills-section">
+        <div className="skills-section" ref={skillsRef}>
           <h2 className="section-heading">Skills</h2>
           <div className="skills-grid">
             {skills.map((skill, index) => (
@@ -95,7 +135,7 @@ const ProfileSection = () => {
         </div>
 
         {/* Experience & Education Section */}
-        <div className="timeline-section">
+        <div className="timeline-section" ref={timelineRef}>
           <h2 className="section-heading">Experience & Education</h2>
           <div className="timeline">
             {experiences.map((item, index) => (
