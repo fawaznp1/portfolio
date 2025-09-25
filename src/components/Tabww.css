@@ -231,7 +231,9 @@
 
 @media (max-width: 480px) {
   .timeline-content {
-    flex-direction: column;
+/*     flex-direction: column; */
+    padding: .5rem;
+    gap: .5rem;
   }
   
   .timeline-icon {
