@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
+import LanguageDropdown from './LanguageDropdown';
 
 function BasicExample() {
   const [expanded, setExpanded] = useState(false);
@@ -106,6 +107,7 @@ function BasicExample() {
               Contact
             </Nav.Link>
           </Nav>
+          <LanguageDropdown />
         </Navbar.Collapse>
       </Container>
     </Navbar>
