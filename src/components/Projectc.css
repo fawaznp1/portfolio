@@ -73,7 +73,7 @@
   font-weight: bold;
 }
 
-/* Link Buttons Styles */
+/* Modern Button Styles */
 .project-links-container {
   position: absolute;
   top: 170px;
@@ -82,57 +82,64 @@
   align-items: center;
 }
 
-.project-github-link {
-  border: 0px;
-  margin-right: 5px;
+.project-github-btn {
+  border: none;
+  cursor: pointer;
   position: relative;
   display: inline-flex;
   align-items: center;
-  background-color: #24292e;
+  background: linear-gradient(135deg, #24292e, #1a1e22);
   margin-top: 1.7rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  transition: all 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
-  box-shadow: none;
-  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(36, 41, 46, 0.3);
+  font-family: inherit;
+  font-size: 14px;
 }
 
-.project-github-link.github-hover {
-  background-color: #333;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.project-github-btn:hover,
+.project-github-btn.github-hover {
+  background: linear-gradient(135deg, #333, #24292e);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(36, 41, 46, 0.4);
 }
 
-.project-live-link {
-  border: 0px;
+.project-live-btn {
+  border: none;
+  cursor: pointer;
   position: relative;
   display: inline-flex;
   align-items: center;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   margin-top: 1.7rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  transition: all 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
-  box-shadow: none;
-  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  font-family: inherit;
+  font-size: 14px;
 }
 
-.project-live-link.live-hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.project-live-btn:hover,
+.project-live-btn.live-hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
 }
 
 .project-icon {
   color: white;
   margin-right: 0.5rem;
+  font-size: 16px;
 }
 
 .project-link-text {
   color: white;
   font-weight: 500;
+  font-size: inherit;
 }
 
 /* See More Button Styles */
@@ -142,21 +149,28 @@
 }
 
 .see-more-btn {
-  padding: 10px 25px;
+  padding: 12px 28px;
   font-size: 1rem;
-  font-weight: bold; 
+  font-weight: 600;
   color: #fff;
   background: linear-gradient(135deg, #21b8e2, #025874);
   border: none;
-  border-radius: 30px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(33, 184, 226, 0.3);
+  font-family: inherit;
 }
 
 .see-more-btn:hover {
-  background: linear-gradient(135deg, #21b8e2, #025874);
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+  background: linear-gradient(135deg, #1da8d1, #024a63);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(33, 184, 226, 0.4);
+}
+
+.see-more-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 10px rgba(33, 184, 226, 0.3);
 }
 
 

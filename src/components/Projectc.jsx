@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import { data } from "../components/Data";
 import { useEffect } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { FaSquareArrowUpRight } from 'react-icons/fa6';
 
 function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -51,28 +52,26 @@ function Projects() {
                         </Card.Text>
                      
                         <div className="project-links-container">
-                          <a 
-                            className={`project-github-link ${isGithubHovered ? 'github-hover' : ''}`}
-                            target="__blank" 
-                            href={item.github}
+                          <button 
+                            className={`project-github-btn ${isGithubHovered ? 'github-hover' : ''}`}
+                            onClick={() => window.open(item.github, '_blank')}
                             onMouseEnter={() => setIsGithubHovered(true)}
                             onMouseLeave={() => setIsGithubHovered(false)}
                           >
-                            <i className="fa-brands fa-github fa-lg project-icon"></i>
+                            <i className="fa-brands fa-github project-icon"></i>
                             <span className="project-link-text">Source Code</span>
-                          </a>
+                          </button>
                           
-                          <a
-                            className={`project-live-link ${isLiveHovered ? 'live-hover' : ''}`}
-                            target="__blank" 
-                            href={item.link}
+                          <button
+                            className={`project-live-btn ${isLiveHovered ? 'live-hover' : ''}`}
+                            onClick={() => window.open(item.link, '_blank')}
                             title="View Live Demo"
                             onMouseEnter={() => setIsLiveHovered(true)}
                             onMouseLeave={() => setIsLiveHovered(false)}
                           >
-                            <i className="fa-solid fa-arrow-up-right-from-square fa-lg project-icon"></i>
+                            <FaSquareArrowUpRight className='project-icon'/>
                             <span className="project-link-text">Preview Site</span>
-                          </a>
+                          </button>
                         </div>
                       </Card.Body>
                     </Card>
@@ -99,28 +98,26 @@ function Projects() {
                           </Card.Text>
                         
                           <div className="project-links-container">
-                            <a 
-                              className={`project-github-link ${isGithubHovered ? 'github-hover' : ''}`}
-                              target="__blank" 
-                              href={item.github}
+                            <button 
+                              className={`project-github-btn ${isGithubHovered ? 'github-hover' : ''}`}
+                              onClick={() => window.open(item.github, '_blank')}
                               onMouseEnter={() => setIsGithubHovered(true)}
                               onMouseLeave={() => setIsGithubHovered(false)}
                             >
-                              <i className="fa-brands fa-github fa-lg project-icon"></i>
+                              <i className="fa-brands fa-github project-icon"></i>
                               <span className="project-link-text">Source Code</span>
-                            </a>
+                            </button>
                             
-                            <a
-                              className={`project-live-link ${isLiveHovered ? 'live-hover' : ''}`}
-                              target="__blank"
-                              href={item.link}
+                            <button
+                              className={`project-live-btn ${isLiveHovered ? 'live-hover' : ''}`}
+                              onClick={() => window.open(item.link, '_blank')}
                               title="View Live Demo"
                               onMouseEnter={() => setIsLiveHovered(true)}
                               onMouseLeave={() => setIsLiveHovered(false)}
                             >
-                              <i className="fa-solid fa-arrow-up-right-from-square fa-lg project-icon"></i>
+                              <FaSquareArrowUpRight className='project-icon'/>
                               <span className="project-link-text">Preview Site</span>
-                            </a>
+                            </button>
                           </div>
                         </Card.Body>
                       </Card>

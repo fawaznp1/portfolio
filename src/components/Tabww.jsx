@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   FaReact, 
   FaBootstrap, 
@@ -13,9 +12,11 @@ import {
   FaGithub,
   
 } from 'react-icons/fa';
-import { SiMongodb, SiVercel, SiMui  } from 'react-icons/si';
+import { SiMongodb, SiVercel,  SiTypescript  } from 'react-icons/si';
 
 import './Tabww.css';
+import { LuBriefcaseBusiness } from 'react-icons/lu';
+import { RiTailwindCssFill } from 'react-icons/ri';
 
 const ProfileSection = () => {
   const skills = [
@@ -24,21 +25,29 @@ const ProfileSection = () => {
   { name: 'JavaScript', icon: <FaJsSquare className="skill-icon js" /> },
   
    { name: 'HTML', icon: <FaHtml5 className="skill-icon html" /> },
-   { name: 'Bootstrap', icon: <FaBootstrap className="skill-icon bootstrap" /> },
+   
   { name: 'SQL', icon: <FaDatabase className="skill-icon sql" /> },
- 
+ { name: 'Bootstrap', icon: <FaBootstrap className="skill-icon bootstrap" /> },
   
   { name: 'MongoDB', icon: <SiMongodb className="skill-icon mongodb" /> },
-  { name: 'CSS', icon: <FaCss3Alt className="skill-icon css" /> },
+  { name: 'CSS / SASS', icon: <FaCss3Alt className="skill-icon css" /> },
   { name: 'Node.js', icon: <FaNodeJs className="skill-icon nodejs" /> },
-  { name: 'GitHub', icon: <FaGithub className="skill-icon github" /> },
+  { name: 'Git & GitHub', icon: <FaGithub className="skill-icon github" /> },
   { name: 'Vercel', icon: <SiVercel className="skill-icon vercel" /> },
-  { name: 'Material UI', icon: <SiMui className="skill-icon mui" /> }
+  { name: 'TypeScript', icon: <SiTypescript className="skill-icon mui" /> },
+  { name: 'Tailwind', icon: <RiTailwindCssFill className="skill-icon mui" /> },
 ];
 
   const experiences = [
     {
-      title: 'MERN Stack Internship',
+      title: 'Software Developer',
+      place: 'Etuwa Concepts Pvt Ltd.',
+      period: '05/25 - present',
+      type: 'work',
+      icon: <LuBriefcaseBusiness className="experience-icon" />
+    },
+    {
+      title: 'MERN Stack Intern',
       place: 'Luminar Technolab',
       period: '07/23 - 01/24',
       type: 'work',
